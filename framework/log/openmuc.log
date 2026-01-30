@@ -1,0 +1,334 @@
+26.01.30 16:08:12.304 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - jetty-11.0.22; built: 2024-06-27T16:27:26.756Z; git: e711d4c7040cb1e61aa68cb248fa7280b734a3bb; jvm 11.0.27+6
+26.01.30 16:08:12.467 [FelixStartLevel] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+26.01.30 16:08:12.514 [FelixStartLevel] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@236ccece{/,null,AVAILABLE}
+26.01.30 16:08:12.537 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - Started Server@21b2545{STARTING}[11.0.22,sto=0] @2945ms
+26.01.30 16:08:13.093 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@559691c4{HTTP/1.1, (http/1.1)}{0.0.0.0:8888}
+26.01.30 16:08:13.158 [FelixStartLevel] INFO  o.e.jetty.util.ssl.SslContextFactory - x509=X509@4ab50ba0(openmuc,h=[openmuc],a=[],w=[]) for Server@6b62207c[provider=null,keyStore=file:///C:/Users/Rightwatts/openmuc/iec-gateway/openmuc/framework/conf/https-certificate.jks,trustStore=null]
+26.01.30 16:08:13.285 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@4115dd45{SSL, (ssl, http/1.1)}{0.0.0.0:8889}
+26.01.30 16:08:13.287 [FelixStartLevel] INFO  org.apache.felix.http - Started Jetty 11.0.22 at port(s) HTTP:8888 HTTPS:8889 on context path / [minThreads=8,maxThreads=200,acceptors=1,selectors=4]
+26.01.30 16:08:14.425 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Activating Data Manager with config conf\channels.xml
+26.01.30 16:08:14.481 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'math'.
+26.01.30 16:08:14.498 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'csv'.
+26.01.30 16:08:14.498 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'aggregator'.
+26.01.30 16:08:14.498 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'virtual'.
+26.01.30 16:08:14.498 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'virtual'.
+26.01.30 16:08:14.498 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'virtual'.
+26.01.30 16:08:14.498 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'virtual'.
+26.01.30 16:08:14.513 [FelixStartLevel] INFO  o.o.f.app.simpledemo.SimpleDemoApp - Activating Demo App
+26.01.30 16:08:14.517 [FelixStartLevel] INFO  o.o.f.app.simpledemo.SimpleDemoApp - Demo App started running...
+26.01.30 16:08:14.518 [FelixStartLevel] INFO  o.o.f.app.simpledemo.SimpleDemoApp - Settings of the PV system: tilt=30:azimuth=0
+26.01.30 16:08:14.545 [FelixStartLevel] INFO  o.o.f.datalogger.ascii.AsciiLogger - Activating Ascii Logger
+26.01.30 16:08:14.547 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Data logger registered: asciilogger
+26.01.30 16:08:14.569 [FelixStartLevel] INFO  o.o.f.d.sql.SqlLoggerService - Activating SQL Logger
+26.01.30 16:08:14.575 [FelixStartLevel] WARN  o.o.f.l.o.c.PropertyFileValidator - New empty config file: conf/properties/org.openmuc.framework.datalogger.sql.SqlLoggerService.cfg
+26.01.30 16:08:14.582 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Data logger registered: sqllogger
+26.01.30 16:08:14.645 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Driver registered: aggregator
+26.01.30 16:08:14.676 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Driver registered: csv
+26.01.30 16:08:14.701 [FelixStartLevel] INFO  o.o.f.driver.channelmath.MathDriver - Activating MathDriver
+26.01.30 16:08:14.702 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Driver registered: math
+26.01.30 16:08:14.712 [FelixStartLevel] INFO  o.o.f.lib.ssl.SslManagerComponent - SSL Component activated
+26.01.30 16:08:14.875 [FelixStartLevel] WARN  o.o.f.l.o.c.PropertyFileValidator - New empty config file: conf/properties/org.openmuc.framework.lib.ssl.SslManager.cfg
+26.01.30 16:08:14.952 [FelixStartLevel] INFO  o.o.f.s.i.server.Iec61850Server - Deactivating 61850 Server a86ae202-058e-4b70-9bed-7301c8e3c9bf
+26.01.30 16:08:14.954 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.framework.driver.csv.CsvDriver - Device connected: ./csv-driver/home1.csv
+26.01.30 16:08:14.956 [FelixStartLevel] INFO  o.o.f.s.i.server.Iec61850Server - Deactivating 61850 Server ef6a82d9-8616-455d-b5f7-176688758cee
+26.01.30 16:08:14.957 [FelixStartLevel] INFO  o.o.f.s.i.server.Iec61850Server - updated server mappings for ef6a82d9-8616-455d-b5f7-176688758cee
+26.01.30 16:08:14.961 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Registered Server: iec61850.
+26.01.30 16:08:15.058 [OpenMUC Data Manager] WARN  o.o.f.d.sql.SqlLoggerService - Sql connection not established!
+26.01.30 16:08:15.093 [OpenMUC Data Manager Pool - thread-1] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -7.129 kW
+26.01.30 16:08:15.189 [FelixStartLevel] INFO  o.o.f.server.restws.RestServer - Activating REST Server
+26.01.30 16:08:15.233 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Channel Access Tool.
+26.01.30 16:08:15.234 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Channel Configurator.
+26.01.30 16:08:15.234 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Data Exporter.
+26.01.30 16:08:15.235 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Data Plotter.
+26.01.30 16:08:15.236 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Media Viewer.
+26.01.30 16:08:15.242 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Simple Demo Visualisation.
+26.01.30 16:08:15.244 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin User Configurator.
+26.01.30 16:08:15.245 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - Activating WebUI Base
+26.01.30 16:08:15.253 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Channel Configurator
+26.01.30 16:08:15.255 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Channel Access Tool
+26.01.30 16:08:15.256 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Data Plotter
+26.01.30 16:08:15.259 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Media Viewer
+26.01.30 16:08:15.265 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Simple Demo Visualisation
+26.01.30 16:08:15.270 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: User Configurator
+26.01.30 16:08:15.272 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Data Exporter
+26.01.30 16:08:15.370 [FelixStartLevel] INFO  org.apache.felix.webconsole - Servlet 3 bridge enabled
+26.01.30 16:08:17.000 [OpenMUC Data Manager] WARN  o.o.f.d.sql.SqlLoggerService - Sql connection not established!
+26.01.30 16:08:19.246 [CM Event Dispatcher (Fire ConfigurationEvent: pid=org.openmuc.framework.server.iec61850.server.Iec61850Server)] INFO  o.o.f.s.i.server.Iec61850Server - Deactivating 61850 Server ef6a82d9-8616-455d-b5f7-176688758cee
+26.01.30 16:08:19.262 [CM Event Dispatcher (Fire ConfigurationEvent: pid=org.openmuc.framework.server.iec61850.server.Iec61850Server)] INFO  o.o.f.s.i.server.Iec61850Server - Deactivating 61850 Server d192c7a6-0a33-4ba6-a0d1-83a32f66042f
+26.01.30 16:08:19.262 [CM Event Dispatcher (Fire ConfigurationEvent: pid=org.openmuc.framework.server.iec61850.server.Iec61850Server)] INFO  o.o.f.s.i.server.Iec61850Server - Deactivating 61850 Server b550cfaa-5a9a-4e45-8910-e551d5c785f6
+26.01.30 16:08:19.262 [CM Event Dispatcher (Fire ConfigurationEvent: pid=org.openmuc.framework.server.iec61850.server.Iec61850Server)] INFO  o.o.f.s.i.server.Iec61850Server - updated server mappings for b550cfaa-5a9a-4e45-8910-e551d5c785f6
+26.01.30 16:08:19.284 [CM Event Dispatcher (Fire ConfigurationEvent: pid=org.openmuc.framework.server.iec61850.server.Iec61850Server)] INFO  o.o.f.core.datamanager.DataManager - Registered Server: iec61850.
+26.01.30 16:08:19.664 [CM Configuration Updater (Update: pid=org.openmuc.framework.lib.ssl.SslManager)] INFO  o.o.framework.lib.ssl.SslManager - Successfully loaded
+26.01.30 16:08:19.670 [CM Configuration Updater (Update: pid=org.openmuc.framework.datalogger.sql.SqlLoggerService)] INFO  o.o.f.datalogger.sql.DbConnector - sql driver
+26.01.30 16:08:19.671 [CM Configuration Updater (Update: pid=org.openmuc.framework.datalogger.sql.SqlLoggerService)] INFO  o.o.f.datalogger.sql.DbConnector - URL is: jdbc:h2:retry:file:./data/h2/h2;AUTO_SERVER=TRUE;MODE=MYSQL
+26.01.30 16:08:20.015 [OpenMUC Data Manager] WARN  o.o.f.d.sql.SqlLoggerService - Sql connection not established!
+26.01.30 16:08:20.019 [OpenMUC Data Manager Pool - thread-1] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -7.13 kW
+26.01.30 16:08:20.389 [CM Configuration Updater (ManagedService Update: pid=[org.openmuc.framework.server.iec61850.server.Iec61850Server])] INFO  o.o.f.s.i.server.Iec61850Server - Server b550cfaa-5a9a-4e45-8910-e551d5c785f6 got update with {felix.fileinstall.filename=file:/C:/Users/Rightwatts/openmuc/iec-gateway/openmuc/framework/conf/properties/org.openmuc.framework.server.iec61850.server.Iec61850Server.cfg, port=10003, schedulingEnabled=true, sclPath=conf/iec61850-server-example.cid, service.pid=org.openmuc.framework.server.iec61850.server.Iec61850Server}
+26.01.30 16:08:20.390 [CM Configuration Updater (ManagedService Update: pid=[org.openmuc.framework.server.iec61850.server.Iec61850Server])] INFO  o.o.f.s.i.server.Iec61850Server - Deactivating 61850 Server b550cfaa-5a9a-4e45-8910-e551d5c785f6
+26.01.30 16:08:20.390 [CM Configuration Updater (ManagedService Update: pid=[org.openmuc.framework.server.iec61850.server.Iec61850Server])] INFO  o.o.f.s.i.server.Iec61850Server - Starting server b550cfaa-5a9a-4e45-8910-e551d5c785f6 @ port: 10003 with scl: conf/iec61850-server-example.cid scheduling enabled: true
+26.01.30 16:08:20.464 [CM Configuration Updater (ManagedService Update: pid=[org.openmuc.framework.server.iec61850.server.Iec61850Server])] INFO  o.o.f.s.i.server.ScheduleAdapter - Processing controller ActPowSchedule_FSCC1_SCHEDULE_CONTROLLER_OUTPUT with reserve schedule ActPowSchedule_FSCC1_RESERVE_SCHEDULE_VALUE
+26.01.30 16:08:20.706 [CM Configuration Updater (ManagedService Update: pid=[org.openmuc.framework.server.iec61850.server.Iec61850Server])] INFO  o.o.f.s.i.server.ScheduleAdapter - Found reserve schedule mapping with channelId=ActPowSchedule_FSCC1_RESERVE_SCHEDULE_VALUE, read reserve schedule IEC61850ScheduleNodeSnapshot{serverName='IED_Controllable_DER', prio=10, values=[123.0], interval=PT0S, scheduleName='ActPow_Res_FSCH01', start=1970-01-01T00:00:01Z, state=ready, numEntr=1, enabledAt=2026-01-30T10:38:20.468253900Z}
+26.01.30 16:08:20.708 [CM Configuration Updater (ManagedService Update: pid=[org.openmuc.framework.server.iec61850.server.Iec61850Server])] INFO  o.o.f.s.i.server.ScheduleAdapter - Ignoring channel power_grid for scheduling mapping. Assuming this is a normal server mapping.
+26.01.30 16:08:20.712 [CM Configuration Updater (ManagedService Update: pid=[org.openmuc.framework.server.iec61850.server.Iec61850Server])] INFO  o.o.f.s.i.server.ValidityChecker - Configuration ok for FSCC defined in channel ActPowSchedule: found 2 associated schedules
+26.01.30 16:08:20.714 [CM Configuration Updater (ManagedService Update: pid=[org.openmuc.framework.server.iec61850.server.Iec61850Server])] INFO  o.o.f.s.i.server.ScheduleAdapter - Done setting up scheduling
+26.01.30 16:08:20.715 [CM Configuration Updater (ManagedService Update: pid=[org.openmuc.framework.server.iec61850.server.Iec61850Server])] INFO  o.o.f.s.i.server.Iec61850Server - Successfully started IEC 61850 server
+26.01.30 16:08:20.726 [OpenMUC Data Manager Pool - thread-1] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = 0.0 kW
+26.01.30 16:08:21.001 [OpenMUC Data Manager Pool - thread-1] WARN  o.o.f.driver.channelmath.MathDriver - Unable to read from channelId=power_self_consumption with reason MathChannelReadExcpetion:Read bad latest record value: 0.0; timestamp: 1769769500726; flag: ACCESS_METHOD_NOT_SUPPORTED (flag is not valid) from channel power_grid. Aborting processing.. Skipping value calculation.
+26.01.30 16:08:21.001 [Timer-1] INFO  o.o.f.s.i.s.ScheduleOutputTarget - Output value for ActPowSchedule_FSCC1_SCHEDULE_CONTROLLER_OUTPUT changed to 123.0, new prio 10
+26.01.30 16:08:25.002 [OpenMUC Data Manager Pool - thread-1] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -7.118 kW
+26.01.30 16:08:30.010 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -7.141 kW
+26.01.30 16:08:35.000 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -7.203 kW
+26.01.30 16:08:40.024 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -7.253 kW
+26.01.30 16:08:45.022 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -7.214 kW
+26.01.30 16:08:50.017 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -6.544 kW
+26.01.30 16:08:55.006 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -6.054 kW
+26.01.30 16:09:00.016 [OpenMUC Data Manager Pool - thread-1] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -7.283 kW
+26.01.30 16:09:05.000 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -7.024 kW
+26.01.30 16:09:10.007 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -7.076 kW
+26.01.30 16:09:15.008 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -2.672 kW
+26.01.30 16:09:20.021 [OpenMUC Data Manager Pool - thread-1] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -1.775 kW
+26.01.30 16:09:25.021 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -1.825 kW
+26.01.30 16:09:30.005 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -1.776 kW
+26.01.30 16:09:35.006 [OpenMUC Data Manager Pool - thread-1] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -1.784 kW
+26.01.30 16:09:40.008 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -1.736 kW
+26.01.30 16:09:45.005 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -1.649 kW
+26.01.30 16:09:47.358 [FelixStartLevel] INFO  o.o.f.server.restws.RestServer - Deactivating REST Server
+26.01.30 16:09:47.388 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - Deactivating WebUI Base
+26.01.30 16:09:47.433 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Channel Access Tool.
+26.01.30 16:09:47.438 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Channel Configurator.
+26.01.30 16:09:47.449 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Data Exporter.
+26.01.30 16:09:47.450 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Data Plotter.
+26.01.30 16:09:47.457 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Media Viewer.
+26.01.30 16:09:47.460 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Simple Demo Visualisation.
+26.01.30 16:09:47.466 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: User Configurator.
+26.01.30 16:09:47.498 [FelixStartLevel] INFO  o.o.f.app.simpledemo.SimpleDemoApp - Deactivating Demo App
+26.01.30 16:09:47.498 [FelixStartLevel] INFO  o.o.f.app.simpledemo.SimpleDemoApp - DemoApp thread interrupted: will stop
+26.01.30 16:09:47.508 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering driver: csv.
+26.01.30 16:09:47.537 [OpenMUC Data Manager Pool - thread-1] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -1.649 kW
+26.01.30 16:09:47.540 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Driver unregistered: csv
+26.01.30 16:09:47.540 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.simpledemo.SimpleDemoApp - home1: current grid power = -1.649 kW
+26.01.30 16:09:47.549 [FelixStartLevel] INFO  o.o.f.s.i.server.Iec61850Server - Deactivating 61850 Server b550cfaa-5a9a-4e45-8910-e551d5c785f6
+26.01.30 16:09:47.559 [FelixStartLevel] INFO  o.o.f.s.i.server.ScheduleAdapter - Shut down controller
+26.01.30 16:09:47.559 [FelixStartLevel] INFO  o.o.f.s.i.server.ScheduleAdapter - Schedule adapter deactivated gracefully
+26.01.30 16:09:47.569 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering driver: math.
+26.01.30 16:09:47.578 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Driver unregistered: math
+26.01.30 16:09:47.595 [FelixStartLevel] INFO  o.o.f.driver.channelmath.MathDriver - Deactivating MathDriver
+26.01.30 16:09:47.600 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering driver: aggregator.
+26.01.30 16:09:47.602 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Driver unregistered: aggregator
+26.01.30 16:09:47.607 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Deactivating Data Manager
+26.01.30 16:09:47.611 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering data logger: asciilogger.
+26.01.30 16:09:47.611 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Data logger deregistered: asciilogger
+26.01.30 16:09:47.611 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering data logger: sqllogger.
+26.01.30 16:09:47.611 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Data logger deregistered: sqllogger
+26.01.30 16:09:47.611 [FelixStartLevel] INFO  o.o.f.datalogger.ascii.AsciiLogger - Deactivating Ascii Logger
+26.01.30 16:09:47.631 [FelixStartLevel] INFO  o.o.f.d.sql.SqlLoggerService - Deactivating SQL Logger
+26.01.30 16:09:47.682 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - Stopped Server@21b2545{STOPPING}[11.0.22,sto=0]
+26.01.30 16:09:47.702 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@559691c4{HTTP/1.1, (http/1.1)}{0.0.0.0:8888}
+26.01.30 16:09:47.702 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@4115dd45{SSL, (ssl, http/1.1)}{0.0.0.0:8889}
+26.01.30 16:09:47.712 [FelixStartLevel] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@236ccece{/,null,STOPPED}
+26.01.30 16:09:47.722 [FelixStartLevel] INFO  org.apache.felix.http - Stopped Jetty
+26.01.30 16:45:30.591 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - jetty-11.0.22; built: 2024-06-27T16:27:26.756Z; git: e711d4c7040cb1e61aa68cb248fa7280b734a3bb; jvm 11.0.27+6
+26.01.30 16:45:30.866 [FelixStartLevel] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+26.01.30 16:45:30.980 [FelixStartLevel] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@19f9ee7d{/,null,AVAILABLE}
+26.01.30 16:45:31.073 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - Started Server@23d20a44{STARTING}[11.0.22,sto=0] @3576ms
+26.01.30 16:45:32.905 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@724e6b39{HTTP/1.1, (http/1.1)}{0.0.0.0:8888}
+26.01.30 16:45:33.009 [FelixStartLevel] INFO  o.e.jetty.util.ssl.SslContextFactory - x509=X509@6662e40(openmuc,h=[openmuc],a=[],w=[]) for Server@6777756[provider=null,keyStore=file:///C:/Users/Rightwatts/openmuc/iec-gateway/openmuc/framework/conf/https-certificate.jks,trustStore=null]
+26.01.30 16:45:34.056 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@18dfc627{SSL, (ssl, http/1.1)}{0.0.0.0:8889}
+26.01.30 16:45:34.056 [FelixStartLevel] INFO  org.apache.felix.http - Started Jetty 11.0.22 at port(s) HTTP:8888 HTTPS:8889 on context path / [minThreads=8,maxThreads=200,acceptors=1,selectors=4]
+26.01.30 16:45:36.942 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Activating Data Manager with config conf\channels.xml
+26.01.30 16:45:36.985 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'math'.
+26.01.30 16:45:36.993 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'csv'.
+26.01.30 16:45:36.993 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'aggregator'.
+26.01.30 16:45:36.993 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'virtual'.
+26.01.30 16:45:36.993 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'virtual'.
+26.01.30 16:45:36.993 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'virtual'.
+26.01.30 16:45:36.993 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'virtual'.
+26.01.30 16:45:37.016 [FelixStartLevel] INFO  o.o.f.datalogger.ascii.AsciiLogger - Activating Ascii Logger
+26.01.30 16:45:37.020 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Data logger registered: asciilogger
+26.01.30 16:45:37.044 [FelixStartLevel] INFO  o.o.f.d.sql.SqlLoggerService - Activating SQL Logger
+26.01.30 16:45:37.155 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Data logger registered: sqllogger
+26.01.30 16:45:37.234 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Driver registered: modbus
+26.01.30 16:45:37.243 [FelixStartLevel] INFO  o.o.f.lib.ssl.SslManagerComponent - SSL Component activated
+26.01.30 16:45:37.773 [FelixStartLevel] INFO  o.o.f.server.restws.RestServer - Activating REST Server
+26.01.30 16:45:37.841 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Channel Access Tool.
+26.01.30 16:45:37.842 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Channel Configurator.
+26.01.30 16:45:37.843 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Data Exporter.
+26.01.30 16:45:37.844 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Data Plotter.
+26.01.30 16:45:37.845 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Media Viewer.
+26.01.30 16:45:37.846 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Simple Demo Visualisation.
+26.01.30 16:45:37.846 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin User Configurator.
+26.01.30 16:45:37.849 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - Activating WebUI Base
+26.01.30 16:45:37.858 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Channel Configurator
+26.01.30 16:45:37.860 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Channel Access Tool
+26.01.30 16:45:37.861 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Data Plotter
+26.01.30 16:45:37.863 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Media Viewer
+26.01.30 16:45:37.865 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Simple Demo Visualisation
+26.01.30 16:45:37.866 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: User Configurator
+26.01.30 16:45:37.868 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Data Exporter
+26.01.30 16:45:38.400 [FelixStartLevel] INFO  org.apache.felix.webconsole - Servlet 3 bridge enabled
+26.01.30 16:45:40.010 [OpenMUC Data Manager] WARN  o.o.f.d.sql.SqlLoggerService - Sql connection not established!
+26.01.30 16:45:42.014 [OpenMUC Data Manager] WARN  o.o.f.d.sql.SqlLoggerService - Sql connection not established!
+26.01.30 16:45:42.062 [CM Configuration Updater (Update: pid=org.openmuc.framework.lib.ssl.SslManager)] INFO  o.o.framework.lib.ssl.SslManager - Successfully loaded
+26.01.30 16:45:42.068 [CM Configuration Updater (Update: pid=org.openmuc.framework.datalogger.sql.SqlLoggerService)] INFO  o.o.f.datalogger.sql.DbConnector - sql driver
+26.01.30 16:45:42.069 [CM Configuration Updater (Update: pid=org.openmuc.framework.datalogger.sql.SqlLoggerService)] INFO  o.o.f.datalogger.sql.DbConnector - URL is: jdbc:h2:retry:file:./data/h2/h2;AUTO_SERVER=TRUE;MODE=MYSQL
+26.01.30 16:47:52.218 [FelixStartLevel] INFO  o.o.f.server.restws.RestServer - Deactivating REST Server
+26.01.30 16:47:52.223 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - Deactivating WebUI Base
+26.01.30 16:47:52.225 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Channel Access Tool.
+26.01.30 16:47:52.226 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Channel Configurator.
+26.01.30 16:47:52.227 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Data Exporter.
+26.01.30 16:47:52.228 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Data Plotter.
+26.01.30 16:47:52.228 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Media Viewer.
+26.01.30 16:47:52.229 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Simple Demo Visualisation.
+26.01.30 16:47:52.230 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: User Configurator.
+26.01.30 16:47:52.240 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Deactivating Data Manager
+26.01.30 16:47:52.241 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering driver: modbus.
+26.01.30 16:47:52.242 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Driver unregistered: modbus
+26.01.30 16:47:52.243 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering data logger: asciilogger.
+26.01.30 16:47:52.244 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Data logger deregistered: asciilogger
+26.01.30 16:47:52.244 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering data logger: sqllogger.
+26.01.30 16:47:52.245 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Data logger deregistered: sqllogger
+26.01.30 16:47:52.246 [FelixStartLevel] INFO  o.o.f.datalogger.ascii.AsciiLogger - Deactivating Ascii Logger
+26.01.30 16:47:52.267 [FelixStartLevel] INFO  o.o.f.d.sql.SqlLoggerService - Deactivating SQL Logger
+26.01.30 16:47:52.283 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - Stopped Server@23d20a44{STOPPING}[11.0.22,sto=0]
+26.01.30 16:47:52.299 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@724e6b39{HTTP/1.1, (http/1.1)}{0.0.0.0:8888}
+26.01.30 16:47:52.299 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@18dfc627{SSL, (ssl, http/1.1)}{0.0.0.0:8889}
+26.01.30 16:47:52.299 [FelixStartLevel] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@19f9ee7d{/,null,STOPPED}
+26.01.30 16:47:52.314 [FelixStartLevel] INFO  org.apache.felix.http - Stopped Jetty
+26.01.30 16:48:06.640 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - jetty-11.0.22; built: 2024-06-27T16:27:26.756Z; git: e711d4c7040cb1e61aa68cb248fa7280b734a3bb; jvm 11.0.27+6
+26.01.30 16:48:06.789 [FelixStartLevel] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+26.01.30 16:48:06.820 [FelixStartLevel] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@5619e6aa{/,null,AVAILABLE}
+26.01.30 16:48:06.851 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - Started Server@690c572d{STARTING}[11.0.22,sto=0] @2823ms
+26.01.30 16:48:07.374 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@12818be1{HTTP/1.1, (http/1.1)}{0.0.0.0:8888}
+26.01.30 16:48:07.421 [FelixStartLevel] INFO  o.e.jetty.util.ssl.SslContextFactory - x509=X509@2864e504(openmuc,h=[openmuc],a=[],w=[]) for Server@6ab24136[provider=null,keyStore=file:///C:/Users/Rightwatts/openmuc/iec-gateway/openmuc/framework/conf/https-certificate.jks,trustStore=null]
+26.01.30 16:48:07.575 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@1a07c740{SSL, (ssl, http/1.1)}{0.0.0.0:8889}
+26.01.30 16:48:07.577 [FelixStartLevel] INFO  org.apache.felix.http - Started Jetty 11.0.22 at port(s) HTTP:8888 HTTPS:8889 on context path / [minThreads=8,maxThreads=200,acceptors=1,selectors=4]
+26.01.30 16:48:08.672 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Activating Data Manager with config conf\channels.xml
+26.01.30 16:48:08.709 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'math'.
+26.01.30 16:48:08.713 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'csv'.
+26.01.30 16:48:08.713 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'aggregator'.
+26.01.30 16:48:08.714 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'virtual'.
+26.01.30 16:48:08.714 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'virtual'.
+26.01.30 16:48:08.714 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'virtual'.
+26.01.30 16:48:08.715 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'virtual'.
+26.01.30 16:48:08.732 [FelixStartLevel] INFO  o.o.f.datalogger.ascii.AsciiLogger - Activating Ascii Logger
+26.01.30 16:48:08.735 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Data logger registered: asciilogger
+26.01.30 16:48:08.751 [FelixStartLevel] INFO  o.o.f.d.sql.SqlLoggerService - Activating SQL Logger
+26.01.30 16:48:08.782 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Data logger registered: sqllogger
+26.01.30 16:48:08.854 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Driver registered: iec61850
+26.01.30 16:48:08.874 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Driver registered: modbus
+26.01.30 16:48:08.880 [FelixStartLevel] INFO  o.o.f.lib.ssl.SslManagerComponent - SSL Component activated
+26.01.30 16:48:09.126 [FelixStartLevel] INFO  o.o.f.server.restws.RestServer - Activating REST Server
+26.01.30 16:48:09.174 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Channel Access Tool.
+26.01.30 16:48:09.175 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Channel Configurator.
+26.01.30 16:48:09.176 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Data Exporter.
+26.01.30 16:48:09.177 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Data Plotter.
+26.01.30 16:48:09.177 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Media Viewer.
+26.01.30 16:48:09.178 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Simple Demo Visualisation.
+26.01.30 16:48:09.179 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin User Configurator.
+26.01.30 16:48:09.181 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - Activating WebUI Base
+26.01.30 16:48:09.190 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Channel Configurator
+26.01.30 16:48:09.192 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Channel Access Tool
+26.01.30 16:48:09.193 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Data Plotter
+26.01.30 16:48:09.195 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Media Viewer
+26.01.30 16:48:09.197 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Simple Demo Visualisation
+26.01.30 16:48:09.198 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: User Configurator
+26.01.30 16:48:09.200 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Data Exporter
+26.01.30 16:48:09.289 [FelixStartLevel] INFO  org.apache.felix.webconsole - Servlet 3 bridge enabled
+26.01.30 16:48:10.001 [OpenMUC Data Manager] WARN  o.o.f.d.sql.SqlLoggerService - Sql connection not established!
+26.01.30 16:48:12.001 [CM Configuration Updater (Update: pid=org.openmuc.framework.lib.ssl.SslManager)] INFO  o.o.framework.lib.ssl.SslManager - Successfully loaded
+26.01.30 16:48:12.007 [CM Configuration Updater (Update: pid=org.openmuc.framework.datalogger.sql.SqlLoggerService)] INFO  o.o.f.datalogger.sql.DbConnector - sql driver
+26.01.30 16:48:12.007 [CM Configuration Updater (Update: pid=org.openmuc.framework.datalogger.sql.SqlLoggerService)] INFO  o.o.f.datalogger.sql.DbConnector - URL is: jdbc:h2:retry:file:./data/h2/h2;AUTO_SERVER=TRUE;MODE=MYSQL
+26.01.30 16:48:12.010 [OpenMUC Data Manager] WARN  o.o.f.d.sql.SqlLoggerService - Sql connection not established!
+26.01.30 16:48:53.924 [qtp54584035-80] INFO  o.o.f.webui.base.WebUiBaseServlet - /login
+26.01.30 16:48:53.932 [qtp54584035-80] INFO  o.o.f.c.a.Authentication - register
+26.01.30 16:49:38.597 [FelixStartLevel] INFO  o.o.f.server.restws.RestServer - Deactivating REST Server
+26.01.30 16:49:38.601 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - Deactivating WebUI Base
+26.01.30 16:49:38.603 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Channel Access Tool.
+26.01.30 16:49:38.604 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Channel Configurator.
+26.01.30 16:49:38.605 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Data Exporter.
+26.01.30 16:49:38.606 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Data Plotter.
+26.01.30 16:49:38.606 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Media Viewer.
+26.01.30 16:49:38.607 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Simple Demo Visualisation.
+26.01.30 16:49:38.608 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: User Configurator.
+26.01.30 16:49:38.617 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Deactivating Data Manager
+26.01.30 16:49:38.618 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering driver: iec61850.
+26.01.30 16:49:38.618 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Driver unregistered: iec61850
+26.01.30 16:49:38.618 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering driver: modbus.
+26.01.30 16:49:38.618 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Driver unregistered: modbus
+26.01.30 16:49:38.618 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering data logger: asciilogger.
+26.01.30 16:49:38.618 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Data logger deregistered: asciilogger
+26.01.30 16:49:38.618 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering data logger: sqllogger.
+26.01.30 16:49:38.618 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Data logger deregistered: sqllogger
+26.01.30 16:49:38.618 [FelixStartLevel] INFO  o.o.f.datalogger.ascii.AsciiLogger - Deactivating Ascii Logger
+26.01.30 16:49:38.634 [FelixStartLevel] INFO  o.o.f.d.sql.SqlLoggerService - Deactivating SQL Logger
+26.01.30 16:49:38.656 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - Stopped Server@690c572d{STOPPING}[11.0.22,sto=0]
+26.01.30 16:49:38.672 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@12818be1{HTTP/1.1, (http/1.1)}{0.0.0.0:8888}
+26.01.30 16:49:38.672 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@1a07c740{SSL, (ssl, http/1.1)}{0.0.0.0:8889}
+26.01.30 16:49:38.687 [FelixStartLevel] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@5619e6aa{/,null,STOPPED}
+26.01.30 16:49:38.687 [FelixStartLevel] INFO  org.apache.felix.http - Stopped Jetty
+26.01.30 17:11:29.990 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - jetty-11.0.22; built: 2024-06-27T16:27:26.756Z; git: e711d4c7040cb1e61aa68cb248fa7280b734a3bb; jvm 11.0.27+6
+26.01.30 17:11:30.207 [FelixStartLevel] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+26.01.30 17:11:30.253 [FelixStartLevel] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@7ddcab50{/,null,AVAILABLE}
+26.01.30 17:11:30.276 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - Started Server@1be1b4ee{STARTING}[11.0.22,sto=0] @4176ms
+26.01.30 17:11:30.913 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@320c9f38{HTTP/1.1, (http/1.1)}{0.0.0.0:8888}
+26.01.30 17:11:31.002 [FelixStartLevel] INFO  o.e.jetty.util.ssl.SslContextFactory - x509=X509@677d839e(openmuc,h=[openmuc],a=[],w=[]) for Server@4bb01eaa[provider=null,keyStore=file:///C:/Users/Rightwatts/openmuc/iec-gateway/openmuc/framework/conf/https-certificate.jks,trustStore=null]
+26.01.30 17:11:31.205 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@5abf078c{SSL, (ssl, http/1.1)}{0.0.0.0:8889}
+26.01.30 17:11:31.205 [FelixStartLevel] INFO  org.apache.felix.http - Started Jetty 11.0.22 at port(s) HTTP:8888 HTTPS:8889 on context path / [minThreads=8,maxThreads=200,acceptors=1,selectors=4]
+26.01.30 17:11:32.293 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Activating Data Manager with config conf\channels.xml
+26.01.30 17:11:32.334 [FelixStartLevel] INFO  o.o.f.datalogger.ascii.AsciiLogger - Activating Ascii Logger
+26.01.30 17:11:32.337 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Data logger registered: asciilogger
+26.01.30 17:11:32.350 [FelixStartLevel] INFO  o.o.f.d.sql.SqlLoggerService - Activating SQL Logger
+26.01.30 17:11:32.363 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Data logger registered: sqllogger
+26.01.30 17:11:32.427 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Driver registered: iec61850
+26.01.30 17:11:32.445 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Driver registered: modbus
+26.01.30 17:11:32.451 [FelixStartLevel] INFO  o.o.f.lib.ssl.SslManagerComponent - SSL Component activated
+26.01.30 17:11:32.685 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Channel Access Tool.
+26.01.30 17:11:32.686 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Channel Configurator.
+26.01.30 17:11:32.686 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Data Exporter.
+26.01.30 17:11:32.688 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Data Plotter.
+26.01.30 17:11:32.689 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Media Viewer.
+26.01.30 17:11:32.689 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Simple Demo Visualisation.
+26.01.30 17:11:32.690 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin User Configurator.
+26.01.30 17:11:32.692 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - Activating WebUI Base
+26.01.30 17:11:32.713 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Channel Configurator
+26.01.30 17:11:32.714 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Channel Access Tool
+26.01.30 17:11:32.716 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Data Plotter
+26.01.30 17:11:32.717 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Media Viewer
+26.01.30 17:11:32.719 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Simple Demo Visualisation
+26.01.30 17:11:32.721 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: User Configurator
+26.01.30 17:11:32.722 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Data Exporter
+26.01.30 17:11:32.755 [FelixStartLevel] INFO  o.o.f.server.restws.RestServer - Activating REST Server
+26.01.30 17:11:32.853 [FelixStartLevel] INFO  org.apache.felix.webconsole - Servlet 3 bridge enabled
+26.01.30 17:11:37.119 [CM Configuration Updater (Update: pid=org.openmuc.framework.lib.ssl.SslManager)] INFO  o.o.framework.lib.ssl.SslManager - Successfully loaded
+26.01.30 17:11:37.127 [CM Configuration Updater (Update: pid=org.openmuc.framework.datalogger.sql.SqlLoggerService)] INFO  o.o.f.datalogger.sql.DbConnector - sql driver
+26.01.30 17:11:37.128 [CM Configuration Updater (Update: pid=org.openmuc.framework.datalogger.sql.SqlLoggerService)] INFO  o.o.f.datalogger.sql.DbConnector - URL is: jdbc:h2:retry:file:./data/h2/h2;AUTO_SERVER=TRUE;MODE=MYSQL
+26.01.30 17:11:38.638 [CM Configuration Updater (Update: pid=org.openmuc.framework.datalogger.sql.SqlLoggerService)] WARN  o.o.f.datalogger.sql.MetaBuilder - There are no channels for meta table
+26.01.30 17:11:38.678 [CM Configuration Updater (Update: pid=org.openmuc.framework.datalogger.sql.SqlLoggerService)] ERROR o.o.f.datalogger.sql.DbAccess - Error executing SQL: 
+INSERT INTO openmuc_meta (time,channelid,channelAdress,loggingInterval,loggingTimeOffset,unit,valueType,scalingFactor,valueOffset,listening,loggingEvent,samplingInterval,samplingTimeOffset,SamplingGroup,disabled,description) VALUE;
+26.01.30 17:11:38.679 [CM Configuration Updater (Update: pid=org.openmuc.framework.datalogger.sql.SqlLoggerService)] ERROR o.o.f.datalogger.sql.DbAccess - SQLState:     42001
+26.01.30 17:11:38.680 [CM Configuration Updater (Update: pid=org.openmuc.framework.datalogger.sql.SqlLoggerService)] ERROR o.o.f.datalogger.sql.DbAccess - VendorError:  42,001
+26.01.30 17:14:04.414 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - Deactivating WebUI Base
+26.01.30 17:14:04.417 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Channel Access Tool.
+26.01.30 17:14:04.419 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Channel Configurator.
+26.01.30 17:14:04.420 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Data Exporter.
+26.01.30 17:14:04.422 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Data Plotter.
+26.01.30 17:14:04.423 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Media Viewer.
+26.01.30 17:14:04.424 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Simple Demo Visualisation.
+26.01.30 17:14:04.425 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: User Configurator.
+26.01.30 17:14:04.430 [FelixStartLevel] INFO  o.o.f.server.restws.RestServer - Deactivating REST Server
+26.01.30 17:14:04.450 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering data logger: sqllogger.
+26.01.30 17:14:04.452 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Data logger deregistered: sqllogger
+26.01.30 17:14:04.456 [FelixStartLevel] INFO  o.o.f.d.sql.SqlLoggerService - Deactivating SQL Logger
+26.01.30 17:14:04.463 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Deactivating Data Manager
+26.01.30 17:14:04.468 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering driver: iec61850.
+26.01.30 17:14:04.468 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Driver unregistered: iec61850
+26.01.30 17:14:04.468 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering driver: modbus.
+26.01.30 17:14:04.468 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Driver unregistered: modbus
+26.01.30 17:14:04.468 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering data logger: asciilogger.
+26.01.30 17:14:04.468 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Data logger deregistered: asciilogger
+26.01.30 17:14:04.468 [FelixStartLevel] INFO  o.o.f.datalogger.ascii.AsciiLogger - Deactivating Ascii Logger
+26.01.30 17:14:04.515 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - Stopped Server@1be1b4ee{STOPPING}[11.0.22,sto=0]
+26.01.30 17:14:04.530 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@320c9f38{HTTP/1.1, (http/1.1)}{0.0.0.0:8888}
+26.01.30 17:14:04.546 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@5abf078c{SSL, (ssl, http/1.1)}{0.0.0.0:8889}
+26.01.30 17:14:04.546 [FelixStartLevel] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@7ddcab50{/,null,STOPPED}
+26.01.30 17:14:04.553 [FelixStartLevel] INFO  org.apache.felix.http - Stopped Jetty

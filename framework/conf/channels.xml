@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+
+  <driver id="math">
+    <device id="self-consumption-calculation">
+      <channel id="power_self_consumption">
+        <description>test</description>
+        <channelAddress>max( §power_grid§ + §power_photovoltaics§ , 0)</channelAddress>
+        <settings>math-ts-strategy=use_average_timestamp</settings>
+        <samplingInterval>5s</samplingInterval>
+        <loggingInterval>5s</loggingInterval>
+        <!-- delay calculation a bit in order to base it on the newly fetched values -->
+        <samplingTimeOffset>1s</samplingTimeOffset>
+        <!-- delay logging such that it starts after the sampling is done -->
+        <loggingTimeOffset>2s</loggingTimeOffset>
+        <unit>kW</unit>
+      </channel>
+    </device>
+  </driver>
+
+  <driver id="csv">
+    <samplingTimeout>10s</samplingTimeout>
+    <connectRetryInterval>1m</connectRetryInterval>
+    <device id="home1">
+      <description/>
+      <deviceAddress>./csv-driver/home1.csv</deviceAddress>
+      <settings>samplingmode=hhmmss;rewind=true</settings>
+      <channel id="hhmmss">
+        <description>hhmmss</description>
+        <channelAddress>hhmmss</channelAddress>
+        <samplingInterval>5s</samplingInterval>
+      </channel>
+      <channel id="power_photovoltaics">
+        <description>PV Power Production</description>
+        <channelAddress>pv_power_production</channelAddress>
+        <unit>kW</unit>
+        <samplingInterval>5s</samplingInterval>
+        <settings>tilt=30:azimuth=0</settings>
+        <loggingInterval>5s</loggingInterval>
+      </channel>
+      <channel id="power_heatpump">
+        <description>Heat Pump Power Consumption</description>
+        <channelAddress>hp_power_consumption</channelAddress>
+        <unit>kW</unit>
+        <samplingInterval>5s</samplingInterval>
+        <loggingInterval>5s</loggingInterval>
+      </channel>
+      <channel id="power_grid">
+        <description>Grid Power</description>
+        <channelAddress>grid_power</channelAddress>
+        <unit>kW</unit>
+        <samplingInterval>5s</samplingInterval>
+        <loggingInterval>5s</loggingInterval>
+        <serverMapping id="iec61850">IED_Controllable_DER/ActPow_GGIO1.AnOut1.mxVal.f:MX</serverMapping>
+        <!-- the above makes this measurement accessible on the IEC61850 server -->
+      </channel>
+      <channel id="power_electric_vehicle">
+        <description>EV Power Consumption</description>
+        <channelAddress>ev_power_consumption</channelAddress>
+        <unit>kW</unit>
+        <samplingInterval>5s</samplingInterval>
+        <loggingInterval>5s</loggingInterval>
+      </channel>
+    </device>
+  </driver>
+  <driver id="aggregator">
+    <device id="aggregationdevice">
+      <samplingTimeout>55s</samplingTimeout>
+      <connectRetryInterval>1m</connectRetryInterval>
+      <channel id="ev_power_aggr">
+        <channelAddress>power_electric_vehicle:avg:0.9</channelAddress>
+        <samplingInterval>5s</samplingInterval>
+        <samplingTimeOffset>5s</samplingTimeOffset>
+        <loggingInterval>5s</loggingInterval>
+      </channel>
+      <channel id="power_photovoltaics_aggr">
+        <channelAddress>power_photovoltaics:avg:0.9</channelAddress>
+        <samplingInterval>5s</samplingInterval>
+        <samplingTimeOffset>5s</samplingTimeOffset>
+        <loggingInterval>5s</loggingInterval>
+      </channel>
+    </device>
+  </driver>
+  <driver id="virtual">
+    <device id="virtual">
+      <channel id="status_electric_vehicle">
+        <description>(calculated by demo app)</description>
+        <valueType length="20">STRING</valueType>
+        <loggingInterval>5s</loggingInterval>
+      </channel>
+      <channel id="energy_exported">
+        <description>(calculated by demo app)</description>
+        <unit>kWh</unit>
+        <loggingInterval>5s</loggingInterval>
+      </channel>
+      <channel id="energy_imported">
+        <description>(calculated by demo app)</description>
+        <unit>kWh</unit>
+        <loggingInterval>5s</loggingInterval>
+      </channel>
+    </device>
+
+    <!-- general settings for ActPowSchedule -->
+    <device id="iec61850-schedule-controller">
+      <channel id="ActPowSchedule_FSCC1_SCHEDULE_CONTROLLER_OUTPUT">
+        <serverMapping id="iec61850">IED_Controllable_DER/ActPow_FSCC1.ValMV.mag.f:MX</serverMapping>
+      </channel>
+      <channel id="ActPowSchedule_FSCC1_RESERVE_SCHEDULE_VALUE">
+        <serverMapping id="iec61850">IED_Controllable_DER/ActPow_Res_FSCH01.ValASG001.setMag.f</serverMapping>
+      </channel>
+    </device>
+
+    <!-- Schedule1 enable and disable channels, belongs to ActPowSchedule schedule controller -->
+    <device id="iec61850-schedule1">
+      <channel id="ActPowSchedule_FSCH01_SCHEDULE_ENABLE">
+        <serverMapping id="iec61850">IED_Controllable_DER/ActPow_FSCH01.EnaReq.Oper.ctlVal:CO</serverMapping>
+        <valueType>BOOLEAN</valueType>
+      </channel>
+      <channel id="ActPowSchedule_FSCH01_SCHEDULE_DISABLE">
+        <serverMapping id="iec61850">IED_Controllable_DER/ActPow_FSCH01.DsaReq.Oper.ctlVal:CO</serverMapping>
+        <valueType>BOOLEAN</valueType>
+      </channel>
+    </device>
+
+    <!-- Schedule2 enable and disable channels, belongs to ActPowSchedule schedule controller -->
+    <device id="iec61850-schedule2">
+      <channel id="ActPowSchedule_FSCH02_SCHEDULE_ENABLE">
+        <serverMapping id="iec61850">IED_Controllable_DER/ActPow_FSCH02.EnaReq.Oper.ctlVal:CO</serverMapping>
+        <valueType>BOOLEAN</valueType>
+      </channel>
+      <channel id="ActPowSchedule_FSCH02_SCHEDULE_DISABLE">
+        <serverMapping id="iec61850">IED_Controllable_DER/ActPow_FSCH02.DsaReq.Oper.ctlVal:CO</serverMapping>
+        <valueType>BOOLEAN</valueType>
+      </channel>
+    </device>
+  </driver>
+</configuration>

@@ -1,4 +1,4 @@
-package org.openmuc.framework.app.gateway.input;
+package org.openmuc.framework.app.gateway.clients;
 
 public class ModbusTCP {
 }

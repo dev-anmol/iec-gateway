@@ -5,11 +5,12 @@ import java.util.Objects;
 
 /**
  * Mapping Configuration - Maps source protocol to IEC 104.
- *
+ * <p>
  * PURPOSE:
  * - Define how source data point maps to IEC 104
  * - Store IOA, ASDU type, data type
  * - Support scaling and offset for Modbus
+ *
  * @author Gateway Team
  * @version 1.0
  */
@@ -58,7 +59,7 @@ public class Mapping {
     /**
      * Simple constructor (most common usage).
      *
-     * @param ioa IEC 104 IOA
+     * @param ioa      IEC 104 IOA
      * @param asduType IEC 104 ASDU type
      * @param dataType Data type
      */
@@ -78,6 +79,11 @@ public class Mapping {
      */
     public Mapping(int ioa, String asduType, String dataType, double scalingFactor, double offset) {
         this(ioa, 1, asduType, dataType, scalingFactor, offset, null);
+    }
+
+    public Mapping(int ioa, String asduType, String dataType,
+                   double scalingFactor, double offset, String description) {
+        this(ioa, 1, asduType, dataType, scalingFactor, offset, description);
     }
 
     /**

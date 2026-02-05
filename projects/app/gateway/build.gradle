@@ -1,0 +1,55 @@
+//plugins {
+//    id 'java'
+//    id 'biz.aQute.bnd.builder version \'6.4.0\''
+//    id 'application'
+//}
+
+plugins {
+    id 'java'
+    id 'biz.aQute.bnd.builder' version '6.4.0'
+    id 'application'
+}
+
+// application {
+//     mainClass = 'org.openmuc.gateway.Main' // Replace with your actual main class
+// }
+
+
+def projectName = "OpenMUC App - Gateway"
+
+jar {
+    bnd(
+            'Bundle-Name' : projectName,
+            'Bundle-SymbolicName' : 'org.openmuc.framework.app.gateway',
+            'Bundle-Version' : '0.20.1',
+            'Import-Package': ',org.osgi.service.component;version="[1.5,2)",org.osgi.service.component.annotations;version="[1.5,2)",org.osgi.framework;version="[1.8,2)",org.openmuc.framework.config;version="[0.20,1)",org.openmuc.framework.data;version="[0.20,1)",org.openmuc.framework.dataaccess;version="[0.20,1)",org.slf4j;version="[1.7,2)",org.osgi.service.http,*',
+            'Export-Package': 'org.openmuc.framework.app.gateway;version=0.20.1',
+            '-dsannotations' : '*',
+            '-metatype' : '*',
+            '-contract' : '!*'
+    )
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.osgi:org.osgi.service.component.annotations:1.5.1'
+    compileOnly 'org.osgi:org.osgi.service.component:1.5.1'
+    compileOnly 'org.osgi:org.osgi.core:6.0.0'
+    compileOnly project(':openmuc-core-api')
+    compileOnly 'org.slf4j:slf4j-api:1.7.36'
+    compileOnly 'org.osgi:org.osgi.service.http:1.2.1'
+    implementation 'org.openmuc:j60870:1.7.2'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+}
+
+

@@ -5,6 +5,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="openmuc.openmuc-app-gateway.main" options="-Xlint:unchecked -Xlint:deprecation" />
       <module name="openmuc.openmuc-app-simpledemo.main" options="-Xlint:unchecked -Xlint:deprecation" />
       <module name="openmuc.openmuc-core-api.main" options="-Xlint:unchecked -Xlint:deprecation" />
       <module name="openmuc.openmuc-core-datamanager.main" options="-Xlint:unchecked -Xlint:deprecation" />

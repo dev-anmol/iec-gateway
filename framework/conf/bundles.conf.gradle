@@ -31,7 +31,7 @@ dependencies {
     osgibundles group: 'com.h2database', name: 'h2', version: '2.3.232'
 
     // for iec-104 server implementation
-    osgibundles group: 'org.openmuc', name: 'j60870', version: '1.1.0'
+    osgibundles group: 'org.openmuc', name: 'j60870', version: '1.7.2'
 //**************************************
     osgibundles group: 'org.openmuc.framework', name: 'openmuc-core-api', version: openmucVersion
     osgibundles group: 'org.openmuc.framework', name: 'openmuc-core-spi', version: openmucVersion

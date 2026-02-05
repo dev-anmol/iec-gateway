@@ -1,2 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<configuration/>
+<configuration>
+
+  <!-- IEC 61850 Driver -->
+  <driver id="iec61850">
+    <device id="ied1">
+      <deviceAddress>127.0.0.1:504</deviceAddress>
+      <settings>-lt 0001 -rt 0001 -a false</settings>
+
+      <channel id="iec61850_measurement1">
+        <description>Readings for Mod.stVal</description>
+        <channelAddress>IC3_F650PRO/LLN0.Mod.stVal:ST</channelAddress>
+        <valueType>DOUBLE</valueType>
+        <samplingInterval>5s</samplingInterval>
+        <loggingInterval>4s</loggingInterval>
+      </channel>
+
+      <channel id="iec61850_measurement2">
+        <description>Readings for Mod.ctlModel</description>
+        <channelAddress>IC3_F650PRO/LLN0.Mod.ctlModel:CF</channelAddress>
+        <valueType>DOUBLE</valueType>
+        <samplingInterval>5s</samplingInterval>
+        <loggingInterval>4s</loggingInterval>
+      </channel>
+
+      <channel id="iec61850_measurement3">
+        <description>Readings for Beh.stVal</description>
+        <channelAddress>IC3_F650PRO/LLN0.Beh.stVal:ST</channelAddress>
+        <valueType>DOUBLE</valueType>
+        <samplingInterval>5s</samplingInterval>
+        <loggingInterval>4s</loggingInterval>
+      </channel>
+
+      <channel id="iec61850_measurement4">
+        <description>Readings for Health.stVal</description>
+        <channelAddress>IC3_F650PRO/LLN0.Health.stVal:ST</channelAddress>
+        <valueType>DOUBLE</valueType>
+        <samplingInterval>5s</samplingInterval>
+        <loggingInterval>4s</loggingInterval>
+      </channel>
+
+      <channel id="iec61850_measurement5">
+        <description>Readings for Loc.stVal</description>
+        <channelAddress>IC3_F650PRO/LLN0.Loc.stVal:ST</channelAddress>
+        <valueType>DOUBLE</valueType>
+        <samplingInterval>5s</samplingInterval>
+        <loggingInterval>4s</loggingInterval>
+      </channel>
+    </device>
+  </driver>
+
+  <!-- Modbus TCP Driver -->
+  <driver id="modbus">
+    <device id="modbus_device1">
+      <deviceAddress>127.0.0.1:502</deviceAddress>
+      <settings>TCP</settings>
+
+      <channel id="modbus_register1">
+        <channelAddress>1:HOLDING_REGISTERS:1000:INT16</channelAddress>
+        <valueType>SHORT</valueType> 
+        <samplingInterval>5000</samplingInterval>
+        <loggingInterval>4000</loggingInterval>
+        <settings>
+          <setting id="TIMEOUT">3000</setting>
+        </settings>
+      </channel>
+
+      <channel id="modbus_register2">
+        <channelAddress>1:HOLDING_REGISTERS:1004:INT16</channelAddress>
+        <valueType>SHORT</valueType> 
+        <samplingInterval>5000</samplingInterval>
+        <loggingInterval>4000</loggingInterval>
+        <settings>
+          <setting id="TIMEOUT">3000</setting>
+        </settings>
+      </channel>
+    </device>
+  </driver>
+
+</configuration>

@@ -141,16 +141,6 @@ public class ModbusTcpInputHandler {
                     return;
                 }
 
-                if (record.getValue() == null) {
-                    logger.trace("Null value for {}", channelId);
-                    return;
-                }
-
-                if (record.getFlag() != Flag.VALID) {
-                    logger.info("Invalid flag {} for {}", record.getFlag(), channelId);
-                    return;
-                }
-
                 DataPoint dp = new DataPoint();
                 dp.setId(channelId);
                 dp.setIoa(mapping.getIoa());
@@ -158,12 +148,35 @@ public class ModbusTcpInputHandler {
                 dp.setAsduType(mapping.getAsduType());
                 dp.setSourceProtocol("MODBUS_TCP");
                 dp.setTimestamp(System.currentTimeMillis());
-                dp.setValid(true);
 
+                // Check if record is valid - if not, mark data point as invalid
+                if (record.getFlag() != Flag.VALID) {
+                    logger.info("Modbus: {} flag={} - marking INVALID", channelId, record.getFlag());
+                    dp.setValid(false);
+                    // Keep last known value or set to 0
+                    DataPoint existing = dataHolder.getDataPoint(mapping.getIoa());
+                    dp.setValue(existing != null ? existing.getValue() : 0);
+                    dataHolder.updateDataPoint(dp);
+                    return;
+                }
+
+                if (record.getValue() == null) {
+                    logger.trace("Null value for {}", channelId);
+                    dp.setValid(false);
+                    dp.setValue(0);
+                    dataHolder.updateDataPoint(dp);
+                    return;
+                }
+
+                // Valid record
+                dp.setValid(true);
                 Object rawValue = extractValue(record);
 
                 if (rawValue == null) {
                     logger.warn("Null value extracted for {}", channelId);
+                    dp.setValid(false);
+                    dp.setValue(0);
+                    dataHolder.updateDataPoint(dp);
                     return;
                 }
 

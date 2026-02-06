@@ -1,16 +1,12 @@
 package org.openmuc.framework.app.gateway.dto;
 
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
 public class DataPoint {
 
-    // ============================================================================
     // IDENTIFICATION FIELDS
-    // ============================================================================
-
     /**
      * Unique identifier (channel ID from OpenMUC).
      *
@@ -83,7 +79,7 @@ public class DataPoint {
      * - 2-255: Additional stations
      * - 65535: Global broadcast address
      */
-    private int commonAddress = 1;  // Default: single station
+    private int commonAddress = 1; // Default: single station
 
     /**
      * ASDU Type Identifier for IEC 104.
@@ -130,7 +126,8 @@ public class DataPoint {
      * - M_ME_NC_1, M_ME_TF_1: Float
      * - M_ME_NB_1: Short (INT16)
      * - M_SP_NA_1, M_SP_TB_1: Boolean
-     * - M_DP_NA_1, M_DP_TB_1: Integer (0=indeterminate, 1=OFF, 2=ON, 3=indeterminate)
+     * - M_DP_NA_1, M_DP_TB_1: Integer (0=indeterminate, 1=OFF, 2=ON,
+     * 3=indeterminate)
      * - M_IT_NA_1, M_IT_TB_1: Integer or Long (counter value)
      *
      * EXAMPLES:
@@ -162,7 +159,7 @@ public class DataPoint {
      * - true → Quality flags: IV=0 (valid)
      * - false → Quality flags: IV=1 (invalid)
      */
-    private boolean valid = true;  // Default: assume valid
+    private boolean valid = true; // Default: assume valid
 
     /**
      * Timestamp from source device (milliseconds since epoch).
@@ -269,10 +266,6 @@ public class DataPoint {
         this.lastUpdated = System.currentTimeMillis();
     }
 
-    // ============================================================================
-    // GETTERS AND SETTERS
-    // ============================================================================
-
     public String getId() {
         return id;
     }
@@ -327,7 +320,7 @@ public class DataPoint {
 
     public void setValue(Object value) {
         this.value = value;
-        this.lastUpdated = System.currentTimeMillis();  // Update timestamp
+        this.lastUpdated = System.currentTimeMillis(); // Update timestamp
     }
 
     public boolean isValid() {
@@ -434,8 +427,10 @@ public class DataPoint {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         DataPoint dataPoint = (DataPoint) o;
         return ioa == dataPoint.ioa &&
                 commonAddress == dataPoint.commonAddress;
@@ -450,8 +445,7 @@ public class DataPoint {
     public String toString() {
         return String.format(
                 "DataPoint[id=%s, ioa=%d, ca=%d, type=%s, value=%s, valid=%b, age=%ds, protocol=%s]",
-                id, ioa, commonAddress, asduType, value, valid, getAgeSeconds(), sourceProtocol
-        );
+                id, ioa, commonAddress, asduType, value, valid, getAgeSeconds(), sourceProtocol);
     }
 
     /**
@@ -476,7 +470,6 @@ public class DataPoint {
                         "}",
                 id, sourceProtocol, sourceAddress, ioa, commonAddress, asduType,
                 value, value != null ? value.getClass().getSimpleName() : "null",
-                valid, timestamp, lastUpdated, getAgeSeconds(), description, metadata
-        );
+                valid, timestamp, lastUpdated, getAgeSeconds(), description, metadata);
     }
 }

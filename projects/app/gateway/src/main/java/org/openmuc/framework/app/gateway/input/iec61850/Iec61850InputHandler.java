@@ -140,29 +140,42 @@ public class Iec61850InputHandler {
                     return;
                 }
 
-                if (record.getValue() == null) {
-                    logger.trace("Null value for {}", channelId);
-                    return;
-                }
-
-                if (record.getFlag() != Flag.VALID) {
-                    logger.info("Invalid flag {} for {}", record.getFlag(), channelId);
-                    return;
-                }
-
                 DataPoint dp = new DataPoint();
                 dp.setId(channelId);
                 dp.setIoa(mapping.getIoa());
                 dp.setCommonAddress(HardcodedMappings.IEC104_COMMON_ADDRESS);
                 dp.setAsduType(mapping.getAsduType());
                 dp.setSourceProtocol("IEC61850");
-                dp.setTimestamp(record.getTimestamp());
-                dp.setValid(true);
+                dp.setTimestamp(record.getTimestamp() != null ? record.getTimestamp() : System.currentTimeMillis());
 
+                // Check if record is valid - if not, mark data point as invalid
+                if (record.getFlag() != Flag.VALID) {
+                    logger.info("IEC61850: {} flag={} - marking INVALID", channelId, record.getFlag());
+                    dp.setValid(false);
+                    // Keep last known value or set to 0
+                    DataPoint existing = dataHolder.getDataPoint(mapping.getIoa());
+                    dp.setValue(existing != null ? existing.getValue() : 0);
+                    dataHolder.updateDataPoint(dp);
+                    return;
+                }
+
+                if (record.getValue() == null) {
+                    logger.trace("Null value for {}", channelId);
+                    dp.setValid(false);
+                    dp.setValue(0);
+                    dataHolder.updateDataPoint(dp);
+                    return;
+                }
+
+                // Valid record
+                dp.setValid(true);
                 Object value = extractValue(record);
 
                 if (value == null) {
                     logger.warn("Null value extracted for {}", channelId);
+                    dp.setValid(false);
+                    dp.setValue(0);
+                    dataHolder.updateDataPoint(dp);
                     return;
                 }
 

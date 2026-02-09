@@ -3075,3 +3075,722 @@ java.io.IOException: connection closed
 26.02.09 12:21:50.037 [OpenMUC Data Manager Pool - thread-11] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1007, 0 -> 0.0
 26.02.09 12:21:50.037 [OpenMUC Data Manager Pool - thread-9] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1012, 0 -> 5.0
 26.02.09 12:21:50.037 [OpenMUC Data Manager Pool - thread-10] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1010, 0 -> 12.0
+26.02.09 13:07:35.015 [OpenMUC Data Manager Pool - thread-83] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=3032, 0.0 -> 23.0
+26.02.09 13:30:35.025 [OpenMUC Data Manager Pool - thread-112] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=3032, 23.0 -> 90.0
+26.02.09 13:39:55.011 [OpenMUC Data Manager Pool - thread-117] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=3032, 90.0 -> 7.0
+26.02.09 13:40:24.084 [qtp1709525213-58] ERROR org.apache.felix.http - Exception while processing request to /rest/channels/iec61850_measurement17/configs
+org.eclipse.jetty.io.EofException: null
+	at org.eclipse.jetty.io.SocketChannelEndPoint.flush(SocketChannelEndPoint.java:116)
+	at org.eclipse.jetty.io.WriteFlusher.flush(WriteFlusher.java:422)
+	at org.eclipse.jetty.io.WriteFlusher.write(WriteFlusher.java:275)
+	at org.eclipse.jetty.io.WriteFlusher.write(WriteFlusher.java:254)
+	at org.eclipse.jetty.io.AbstractEndPoint.write(AbstractEndPoint.java:386)
+	at org.eclipse.jetty.server.HttpConnection$SendCallback.process(HttpConnection.java:835)
+	at org.eclipse.jetty.util.IteratingCallback.processing(IteratingCallback.java:243)
+	at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:224)
+	at org.eclipse.jetty.server.HttpConnection.send(HttpConnection.java:589)
+	at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:1051)
+	at org.eclipse.jetty.server.HttpChannel.write(HttpChannel.java:1123)
+	at org.eclipse.jetty.server.HttpOutput.channelWrite(HttpOutput.java:270)
+	at org.eclipse.jetty.server.HttpOutput.close(HttpOutput.java:623)
+	at org.apache.felix.http.javaxwrappers.ServletOutputStreamWrapper.close(ServletOutputStreamWrapper.java:148)
+	at org.openmuc.framework.server.restws.servlets.GenericServlet.sendJson(GenericServlet.java:144)
+	at org.openmuc.framework.server.restws.servlets.ChannelResourceServlet.doGet(ChannelResourceServlet.java:90)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.felix.http.jakartawrappers.ServletWrapper.service(ServletWrapper.java:74)
+	at org.apache.felix.http.base.internal.handler.ServletHandler.handle(ServletHandler.java:128)
+	at org.apache.felix.http.base.internal.dispatch.InvocationChain.doFilter(InvocationChain.java:86)
+	at org.apache.felix.http.base.internal.dispatch.Dispatcher$1.doFilter(Dispatcher.java:153)
+	at org.apache.felix.http.base.internal.whiteboard.WhiteboardManager.invokePreprocessors(WhiteboardManager.java:944)
+	at org.apache.felix.http.base.internal.dispatch.Dispatcher.dispatch(Dispatcher.java:95)
+	at org.apache.felix.http.base.internal.dispatch.DispatcherServlet.service(DispatcherServlet.java:49)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.IOException: An established connection was aborted by the software in your host machine
+	at java.base/sun.nio.ch.SocketDispatcher.writev0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:55)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:182)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:130)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:493)
+	at java.base/java.nio.channels.SocketChannel.write(SocketChannel.java:507)
+	at org.eclipse.jetty.io.SocketChannelEndPoint.flush(SocketChannelEndPoint.java:110)
+	... 56 common frames omitted
+26.02.09 13:40:24.086 [qtp1709525213-55887] ERROR org.apache.felix.http - Exception while processing request to /rest/channels/iec61850_measurement14/configs
+org.eclipse.jetty.io.EofException: null
+	at org.eclipse.jetty.io.SocketChannelEndPoint.flush(SocketChannelEndPoint.java:116)
+	at org.eclipse.jetty.io.WriteFlusher.flush(WriteFlusher.java:422)
+	at org.eclipse.jetty.io.WriteFlusher.write(WriteFlusher.java:275)
+	at org.eclipse.jetty.io.WriteFlusher.write(WriteFlusher.java:254)
+	at org.eclipse.jetty.io.AbstractEndPoint.write(AbstractEndPoint.java:386)
+	at org.eclipse.jetty.server.HttpConnection$SendCallback.process(HttpConnection.java:835)
+	at org.eclipse.jetty.util.IteratingCallback.processing(IteratingCallback.java:243)
+	at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:224)
+	at org.eclipse.jetty.server.HttpConnection.send(HttpConnection.java:589)
+	at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:1051)
+	at org.eclipse.jetty.server.HttpChannel.write(HttpChannel.java:1123)
+	at org.eclipse.jetty.server.HttpOutput.channelWrite(HttpOutput.java:270)
+	at org.eclipse.jetty.server.HttpOutput.close(HttpOutput.java:623)
+	at org.apache.felix.http.javaxwrappers.ServletOutputStreamWrapper.close(ServletOutputStreamWrapper.java:148)
+	at org.openmuc.framework.server.restws.servlets.GenericServlet.sendJson(GenericServlet.java:144)
+	at org.openmuc.framework.server.restws.servlets.ChannelResourceServlet.doGet(ChannelResourceServlet.java:90)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.felix.http.jakartawrappers.ServletWrapper.service(ServletWrapper.java:74)
+	at org.apache.felix.http.base.internal.handler.ServletHandler.handle(ServletHandler.java:128)
+	at org.apache.felix.http.base.internal.dispatch.InvocationChain.doFilter(InvocationChain.java:86)
+	at org.apache.felix.http.base.internal.dispatch.Dispatcher$1.doFilter(Dispatcher.java:153)
+	at org.apache.felix.http.base.internal.whiteboard.WhiteboardManager.invokePreprocessors(WhiteboardManager.java:944)
+	at org.apache.felix.http.base.internal.dispatch.Dispatcher.dispatch(Dispatcher.java:95)
+	at org.apache.felix.http.base.internal.dispatch.DispatcherServlet.service(DispatcherServlet.java:49)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.IOException: An established connection was aborted by the software in your host machine
+	at java.base/sun.nio.ch.SocketDispatcher.writev0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:55)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:182)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:130)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:493)
+	at java.base/java.nio.channels.SocketChannel.write(SocketChannel.java:507)
+	at org.eclipse.jetty.io.SocketChannelEndPoint.flush(SocketChannelEndPoint.java:110)
+	... 56 common frames omitted
+26.02.09 13:40:31.236 [qtp1709525213-54] INFO  o.o.f.webui.base.WebUiBaseServlet - /login
+26.02.09 13:42:01.510 [qtp1709525213-57] WARN  o.o.f.d.ascii.utils.LoggerUtils - Requested logfile: 'C:\Users\Rightwatts\openmuc\iec-gateway\openmuc\framework\data\ascii\20260208_4000.dat' not found.
+26.02.09 13:43:11.288 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - Deactivating WebUI Base
+26.02.09 13:43:11.291 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Channel Access Tool.
+26.02.09 13:43:11.293 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Channel Configurator.
+26.02.09 13:43:11.294 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Data Exporter.
+26.02.09 13:43:11.295 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Data Plotter.
+26.02.09 13:43:11.296 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Media Viewer.
+26.02.09 13:43:11.296 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Simple Demo Visualisation.
+26.02.09 13:43:11.297 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: User Configurator.
+26.02.09 13:43:11.302 [FelixStartLevel] INFO  o.o.f.server.restws.RestServer - Deactivating REST Server
+26.02.09 13:43:11.314 [FelixStartLevel] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - Deactivating IEC61850 Handler...
+26.02.09 13:43:11.319 [FelixStartLevel] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850 Handler deactivated
+26.02.09 13:43:11.320 [FelixStartLevel] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Deactivating Modbus Handler...
+26.02.09 13:43:11.322 [FelixStartLevel] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus Handler deactivated
+26.02.09 13:43:11.323 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - ========================================
+26.02.09 13:43:11.324 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - Deactivating IEC 104 Server...
+26.02.09 13:43:11.325 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - ========================================
+26.02.09 13:43:11.325 [FelixStartLevel] INFO  o.o.f.app.gateway.core.DataHolder - Listener removed, remaining=0
+26.02.09 13:43:11.326 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - Removed DataHolder listener
+26.02.09 13:43:11.327 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - Closing 1 active connections
+26.02.09 13:43:11.328 [FelixStartLevel] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Closing connection: client-1770619895630
+26.02.09 13:43:11.331 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - All connections closed
+26.02.09 13:43:11.331 [DataHolder-Notifier-2] ERROR o.o.f.a.g.output.iec104.Iec104Server - Error sending to client client-1770619895630: connection closed
+26.02.09 13:43:11.331 [DataHolder-Notifier-1] ERROR o.o.f.a.g.output.iec104.Iec104Server - Error sending to client client-1770619895630: connection closed
+26.02.09 13:43:11.333 [ConnectionReader] WARN  o.o.f.a.g.o.i.Iec104ConnectionHandler - Connection client-1770619895630 closed with error: Socket closed
+26.02.09 13:43:11.333 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - j60870 Server stopped
+26.02.09 13:43:11.335 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - IEC 104 Server deactivated
+26.02.09 13:43:11.337 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Deactivating Data Manager
+26.02.09 13:43:11.340 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering driver: iec61850.
+26.02.09 13:43:11.341 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Driver unregistered: iec61850
+26.02.09 13:43:11.342 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering driver: modbus.
+26.02.09 13:43:11.342 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Driver unregistered: modbus
+26.02.09 13:43:11.343 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering data logger: asciilogger.
+26.02.09 13:43:11.344 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Data logger deregistered: asciilogger
+26.02.09 13:43:11.344 [FelixStartLevel] INFO  o.o.f.datalogger.ascii.AsciiLogger - Deactivating Ascii Logger
+26.02.09 13:43:11.373 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - Stopped Server@648459c4{STOPPING}[11.0.22,sto=0]
+26.02.09 13:43:11.382 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@7de925f5{HTTP/1.1, (http/1.1)}{0.0.0.0:8888}
+26.02.09 13:43:11.388 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@72ecf57b{SSL, (ssl, http/1.1)}{0.0.0.0:8889}
+26.02.09 13:43:11.390 [FelixStartLevel] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@6be7eee7{/,null,STOPPED}
+26.02.09 13:43:11.397 [FelixStartLevel] INFO  org.apache.felix.http - Stopped Jetty
+26.02.09 13:45:55.549 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - jetty-11.0.22; built: 2024-06-27T16:27:26.756Z; git: e711d4c7040cb1e61aa68cb248fa7280b734a3bb; jvm 11.0.27+6
+26.02.09 13:45:55.945 [FelixStartLevel] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+26.02.09 13:45:56.052 [FelixStartLevel] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@6ace3613{/,null,AVAILABLE}
+26.02.09 13:45:56.129 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - Started Server@6cbd377{STARTING}[11.0.22,sto=0] @5605ms
+26.02.09 13:45:57.409 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@7741b8c9{HTTP/1.1, (http/1.1)}{0.0.0.0:8888}
+26.02.09 13:45:59.518 [FelixStartLevel] INFO  o.e.jetty.util.ssl.SslContextFactory - x509=X509@5242242b(openmuc,h=[openmuc],a=[],w=[]) for Server@5ab37ef5[provider=null,keyStore=file:///C:/Users/Rightwatts/openmuc/iec-gateway/openmuc/framework/conf/https-certificate.jks,trustStore=null]
+26.02.09 13:46:00.413 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@191bf48e{SSL, (ssl, http/1.1)}{0.0.0.0:8889}
+26.02.09 13:46:00.417 [FelixStartLevel] INFO  org.apache.felix.http - Started Jetty 11.0.22 at port(s) HTTP:8888 HTTPS:8889 on context path / [minThreads=8,maxThreads=200,acceptors=1,selectors=4]
+26.02.09 13:46:02.262 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Activating Data Manager with config conf\channels.xml
+26.02.09 13:46:02.390 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'iec61850'.
+26.02.09 13:46:02.411 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'modbus'.
+26.02.09 13:46:02.423 [FelixStartLevel] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - Activating IEC 61850 Input Handler...
+26.02.09 13:46:02.429 [FelixStartLevel] INFO  o.o.f.app.gateway.core.DataHolder - Initializing DataHolder...
+26.02.09 13:46:02.475 [FelixStartLevel] INFO  o.o.f.app.gateway.core.DataHolder - DataHolder initialized (capacity: 6000, async enabled)
+26.02.09 13:46:02.487 [FelixStartLevel] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Activating Modbus TCP Input Handler...
+26.02.09 13:46:02.492 [DataHolder-NotificationProcessor] INFO  o.o.f.app.gateway.core.DataHolder - Notification processor started
+26.02.09 13:46:02.518 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - Activating IEC 104 Server...
+26.02.09 13:46:02.542 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - j60870 Server started successfully
+26.02.09 13:46:02.549 [FelixStartLevel] INFO  o.o.f.app.gateway.core.DataHolder - Listener added, total=1
+26.02.09 13:46:02.554 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - Registered for spontaneous data updates
+26.02.09 13:46:02.555 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - IEC 104 Server activated successfully
+26.02.09 13:46:02.558 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - Listening on 0.0.0.0:2404
+26.02.09 13:46:02.579 [FelixStartLevel] INFO  o.o.f.datalogger.ascii.AsciiLogger - Activating Ascii Logger
+26.02.09 13:46:02.589 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Data logger registered: asciilogger
+26.02.09 13:46:02.718 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Driver registered: iec61850
+26.02.09 13:46:02.731 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Driver registered: modbus
+26.02.09 13:46:02.750 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.driver.modbus.ModbusDriver - Set sampling timeout to 3000 ms.
+26.02.09 13:46:02.758 [FelixStartLevel] INFO  o.o.f.lib.ssl.SslManagerComponent - SSL Component activated
+26.02.09 13:46:02.886 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.d.m.tcp.ModbusTCPConnection - Modbus Device: 127.0.0.1:502 connected
+26.02.09 13:46:03.473 [FelixStartLevel] INFO  o.o.f.server.restws.RestServer - Activating REST Server
+26.02.09 13:46:03.537 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Channel Access Tool.
+26.02.09 13:46:03.570 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Channel Configurator.
+26.02.09 13:46:03.591 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Data Exporter.
+26.02.09 13:46:03.612 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Data Plotter.
+26.02.09 13:46:03.659 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Media Viewer.
+26.02.09 13:46:03.688 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Simple Demo Visualisation.
+26.02.09 13:46:03.713 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin User Configurator.
+26.02.09 13:46:03.774 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - Activating WebUI Base
+26.02.09 13:46:03.808 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Channel Configurator
+26.02.09 13:46:03.824 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Channel Access Tool
+26.02.09 13:46:03.853 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Data Plotter
+26.02.09 13:46:03.910 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Media Viewer
+26.02.09 13:46:03.929 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Simple Demo Visualisation
+26.02.09 13:46:03.952 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: User Configurator
+26.02.09 13:46:03.996 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Data Exporter
+26.02.09 13:46:04.187 [FelixStartLevel] INFO  org.apache.felix.webconsole - Servlet 3 bridge enabled
+26.02.09 13:46:05.494 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - Found 57 channels in OpenMUC
+26.02.09 13:46:05.500 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement25 - IOA 1025
+26.02.09 13:46:05.501 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement24 - IOA 1024
+26.02.09 13:46:05.503 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement4 - IOA 1004
+26.02.09 13:46:05.504 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement21 - IOA 1021
+26.02.09 13:46:05.505 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement5 - IOA 1005
+26.02.09 13:46:05.506 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement20 - IOA 1020
+26.02.09 13:46:05.507 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement2 - IOA 1002
+26.02.09 13:46:05.508 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement23 - IOA 1023
+26.02.09 13:46:05.509 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Found 57 channels in OpenMUC
+26.02.09 13:46:05.509 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement3 - IOA 1003
+26.02.09 13:46:05.509 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement22 - IOA 1022
+26.02.09 13:46:05.511 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement1 - IOA 1001
+26.02.09 13:46:05.511 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register26 - IOA 3026 (scale=1.0)
+26.02.09 13:46:05.512 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement8 - IOA 1008
+26.02.09 13:46:05.512 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register27 - IOA 3027 (scale=1.0)
+26.02.09 13:46:05.513 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement9 - IOA 1009
+26.02.09 13:46:05.514 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register28 - IOA 3028 (scale=1.0)
+26.02.09 13:46:05.516 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement6 - IOA 1006
+26.02.09 13:46:05.519 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register29 - IOA 3029 (scale=1.0)
+26.02.09 13:46:05.520 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement7 - IOA 1007
+26.02.09 13:46:05.521 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register20 - IOA 3020 (scale=1.0)
+26.02.09 13:46:05.522 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement18 - IOA 1018
+26.02.09 13:46:05.523 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register21 - IOA 3021 (scale=1.0)
+26.02.09 13:46:05.525 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement17 - IOA 1017
+26.02.09 13:46:05.526 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register22 - IOA 3022 (scale=1.0)
+26.02.09 13:46:05.528 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement19 - IOA 1019
+26.02.09 13:46:05.534 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register23 - IOA 3023 (scale=1.0)
+26.02.09 13:46:05.536 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement14 - IOA 1014
+26.02.09 13:46:05.537 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register24 - IOA 3024 (scale=1.0)
+26.02.09 13:46:05.538 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement13 - IOA 1013
+26.02.09 13:46:05.539 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register25 - IOA 3025 (scale=1.0)
+26.02.09 13:46:05.540 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement16 - IOA 1016
+26.02.09 13:46:05.541 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register30 - IOA 3030 (scale=1.0)
+26.02.09 13:46:05.542 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement15 - IOA 1015
+26.02.09 13:46:05.543 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register31 - IOA 3031 (scale=1.0)
+26.02.09 13:46:05.544 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement10 - IOA 1010
+26.02.09 13:46:05.545 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register32 - IOA 3032 (scale=1.0)
+26.02.09 13:46:05.546 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement12 - IOA 1012
+26.02.09 13:46:05.547 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register1 - IOA 3001 (scale=1.0)
+26.02.09 13:46:05.551 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement11 - IOA 1011
+26.02.09 13:46:05.554 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register3 - IOA 3003 (scale=1.0)
+26.02.09 13:46:05.555 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850 Init: 25 OK, 0 Failed, 0 Skipped
+26.02.09 13:46:05.555 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register2 - IOA 3002 (scale=1.0)
+26.02.09 13:46:05.556 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register5 - IOA 3005 (scale=1.0)
+26.02.09 13:46:05.557 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register4 - IOA 3004 (scale=1.0)
+26.02.09 13:46:05.558 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register7 - IOA 3007 (scale=1.0)
+26.02.09 13:46:05.558 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register6 - IOA 3006 (scale=1.0)
+26.02.09 13:46:05.559 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register9 - IOA 3009 (scale=1.0)
+26.02.09 13:46:05.559 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register8 - IOA 3008 (scale=1.0)
+26.02.09 13:46:05.560 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register15 - IOA 3015 (scale=1.0)
+26.02.09 13:46:05.562 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register16 - IOA 3016 (scale=1.0)
+26.02.09 13:46:05.563 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register17 - IOA 3017 (scale=1.0)
+26.02.09 13:46:05.565 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register18 - IOA 3018 (scale=1.0)
+26.02.09 13:46:05.567 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register19 - IOA 3019 (scale=1.0)
+26.02.09 13:46:05.572 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register10 - IOA 3010 (scale=1.0)
+26.02.09 13:46:05.574 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register11 - IOA 3011 (scale=1.0)
+26.02.09 13:46:05.577 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register12 - IOA 3012 (scale=1.0)
+26.02.09 13:46:05.579 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register13 - IOA 3013 (scale=1.0)
+26.02.09 13:46:05.581 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register14 - IOA 3014 (scale=1.0)
+26.02.09 13:46:05.583 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus Init: 32 OK, 0 Failed, 0 Skipped
+26.02.09 13:46:08.526 [CM Configuration Updater (Update: pid=org.openmuc.framework.lib.ssl.SslManager)] INFO  o.o.framework.lib.ssl.SslManager - Successfully loaded
+26.02.09 13:46:10.017 [OpenMUC Data Manager Pool - thread-5] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3004, value=0.0, total=2
+26.02.09 13:46:10.017 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3001, value=2.0, total=2
+26.02.09 13:46:10.018 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3003, value=3.0, total=3
+26.02.09 13:46:10.020 [OpenMUC Data Manager Pool - thread-7] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3006, value=0.0, total=6
+26.02.09 13:46:10.018 [OpenMUC Data Manager Pool - thread-3] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3002, value=3.0, total=4
+26.02.09 13:46:10.029 [OpenMUC Data Manager Pool - thread-7] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3012, value=0.0, total=12
+26.02.09 13:46:10.018 [OpenMUC Data Manager Pool - thread-6] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3005, value=0.0, total=5
+26.02.09 13:46:10.020 [OpenMUC Data Manager Pool - thread-8] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3007, value=0.0, total=7
+26.02.09 13:46:10.035 [OpenMUC Data Manager Pool - thread-6] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3017, value=0.0, total=17
+26.02.09 13:46:10.023 [OpenMUC Data Manager Pool - thread-9] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3008, value=0.0, total=8
+26.02.09 13:46:10.027 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3010, value=0.0, total=10
+26.02.09 13:46:10.027 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3011, value=0.0, total=11
+26.02.09 13:46:10.026 [OpenMUC Data Manager Pool - thread-5] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3009, value=0.0, total=9
+26.02.09 13:46:10.032 [OpenMUC Data Manager Pool - thread-10] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3013, value=0.0, total=13
+26.02.09 13:46:10.035 [OpenMUC Data Manager Pool - thread-3] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3014, value=0.0, total=14
+26.02.09 13:46:10.035 [OpenMUC Data Manager Pool - thread-11] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3015, value=0.0, total=15
+26.02.09 13:46:10.035 [OpenMUC Data Manager Pool - thread-12] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3016, value=0.0, total=16
+26.02.09 13:46:10.037 [OpenMUC Data Manager Pool - thread-7] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3018, value=0.0, total=18
+26.02.09 13:46:10.046 [OpenMUC Data Manager Pool - thread-13] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3019, value=0.0, total=19
+26.02.09 13:46:10.049 [OpenMUC Data Manager Pool - thread-8] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3020, value=0.0, total=20
+26.02.09 13:46:10.051 [OpenMUC Data Manager Pool - thread-15] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3022, value=0.0, total=21
+26.02.09 13:46:10.051 [OpenMUC Data Manager Pool - thread-14] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3021, value=0.0, total=22
+26.02.09 13:46:10.052 [OpenMUC Data Manager Pool - thread-19] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3026, value=0.0, total=23
+26.02.09 13:46:10.052 [OpenMUC Data Manager Pool - thread-22] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3029, value=0.0, total=24
+26.02.09 13:46:10.053 [OpenMUC Data Manager Pool - thread-23] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3030, value=0.0, total=25
+26.02.09 13:46:10.053 [OpenMUC Data Manager Pool - thread-18] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3025, value=0.0, total=26
+26.02.09 13:46:10.077 [OpenMUC Data Manager Pool - thread-16] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3023, value=0.0, total=27
+26.02.09 13:46:10.083 [OpenMUC Data Manager Pool - thread-17] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3024, value=0.0, total=28
+26.02.09 13:46:10.086 [OpenMUC Data Manager Pool - thread-21] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3028, value=0.0, total=29
+26.02.09 13:46:10.087 [OpenMUC Data Manager Pool - thread-24] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3031, value=0.0, total=30
+26.02.09 13:46:10.088 [OpenMUC Data Manager Pool - thread-20] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3027, value=0.0, total=31
+26.02.09 13:46:10.088 [OpenMUC Data Manager Pool - thread-25] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3032, value=7.0, total=32
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-14] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement12 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-23] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement9 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-18] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement8 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-22] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement10 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-8] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement14 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.564 [OpenMUC Data Manager Pool - thread-22] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1010, value=0, total=36
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-17] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement7 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-15] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement13 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-19] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement11 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-13] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement15 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-24] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement2 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-16] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement6 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-20] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement5 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-25] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement4 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-21] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement3 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.561 [OpenMUC Data Manager Pool - thread-1] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement1 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.562 [OpenMUC Data Manager Pool - thread-7] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement16 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.562 [OpenMUC Data Manager Pool - thread-11] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement18 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.562 [OpenMUC Data Manager Pool - thread-3] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement19 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.562 [OpenMUC Data Manager Pool - thread-12] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement17 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.562 [OpenMUC Data Manager Pool - thread-10] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement20 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.562 [OpenMUC Data Manager Pool - thread-5] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement21 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.562 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement22 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.562 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement23 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.562 [OpenMUC Data Manager Pool - thread-9] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement24 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.562 [OpenMUC Data Manager Pool - thread-6] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement25 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 13:46:19.562 [OpenMUC Data Manager Pool - thread-14] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1012, value=0, total=33
+26.02.09 13:46:19.562 [OpenMUC Data Manager Pool - thread-23] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1009, value=0, total=34
+26.02.09 13:46:19.563 [OpenMUC Data Manager Pool - thread-18] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1008, value=0, total=35
+26.02.09 13:46:19.564 [OpenMUC Data Manager Pool - thread-8] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1014, value=0, total=37
+26.02.09 13:46:19.565 [OpenMUC Data Manager Pool - thread-17] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1007, value=0, total=38
+26.02.09 13:46:19.565 [OpenMUC Data Manager Pool - thread-15] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1013, value=0, total=39
+26.02.09 13:46:19.566 [OpenMUC Data Manager Pool - thread-19] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1011, value=0, total=40
+26.02.09 13:46:19.566 [OpenMUC Data Manager Pool - thread-13] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1015, value=0, total=41
+26.02.09 13:46:19.566 [OpenMUC Data Manager Pool - thread-24] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1002, value=0, total=42
+26.02.09 13:46:19.567 [OpenMUC Data Manager Pool - thread-16] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1006, value=0, total=43
+26.02.09 13:46:19.567 [OpenMUC Data Manager Pool - thread-20] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1005, value=0, total=44
+26.02.09 13:46:19.567 [OpenMUC Data Manager Pool - thread-25] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1004, value=0, total=45
+26.02.09 13:46:19.568 [OpenMUC Data Manager Pool - thread-21] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1003, value=0, total=46
+26.02.09 13:46:19.568 [OpenMUC Data Manager Pool - thread-1] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1001, value=0, total=47
+26.02.09 13:46:19.568 [OpenMUC Data Manager Pool - thread-7] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1016, value=0, total=48
+26.02.09 13:46:19.569 [OpenMUC Data Manager Pool - thread-11] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1018, value=0, total=49
+26.02.09 13:46:19.569 [OpenMUC Data Manager Pool - thread-3] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1019, value=0, total=50
+26.02.09 13:46:19.570 [OpenMUC Data Manager Pool - thread-12] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1017, value=0, total=51
+26.02.09 13:46:19.570 [OpenMUC Data Manager Pool - thread-10] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1020, value=0, total=52
+26.02.09 13:46:19.570 [OpenMUC Data Manager Pool - thread-5] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1021, value=0, total=53
+26.02.09 13:46:19.571 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1022, value=0, total=54
+26.02.09 13:46:19.572 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1023, value=0, total=55
+26.02.09 13:46:19.572 [OpenMUC Data Manager Pool - thread-9] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1024, value=0, total=56
+26.02.09 13:46:19.573 [OpenMUC Data Manager Pool - thread-6] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1025, value=0, total=57
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-21] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1012, 0 -> 5.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-1] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1011, 0 -> 24.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-10] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1002, 0 -> 0.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-3] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1008, 0 -> 1.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-9] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1001, 0 -> 1.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-15] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1019, 0 -> 0.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-19] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1018, 0 -> 0.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-25] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1013, 0 -> 1.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-8] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1021, 0 -> 55.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-18] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1022, 0 -> 1.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-12] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1006, 0 -> 0.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-7] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1010, 0 -> 12.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-11] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1009, 0 -> 0.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-23] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1023, 0 -> 1.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-16] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1015, 0 -> 0.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-20] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1014, 0 -> 55.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-6] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1007, 0 -> 0.0
+26.02.09 13:46:20.060 [OpenMUC Data Manager Pool - thread-14] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1024, 0 -> 1.0
+26.02.09 13:46:20.060 [OpenMUC Data Manager Pool - thread-24] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1016, 0 -> 0.0
+26.02.09 13:46:20.060 [OpenMUC Data Manager Pool - thread-17] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1020, 0 -> 0.0
+26.02.09 13:46:20.047 [OpenMUC Data Manager Pool - thread-5] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1003, 0 -> 1.0
+26.02.09 13:46:20.060 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1005, 0 -> 0.0
+26.02.09 13:46:20.060 [OpenMUC Data Manager Pool - thread-22] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1025, 0 -> 1.0
+26.02.09 13:46:20.060 [OpenMUC Data Manager Pool - thread-13] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1017, 0 -> 0.0
+26.02.09 13:46:20.060 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1004, 0 -> 1.0
+26.02.09 13:47:38.722 [qtp1523637287-1145] INFO  o.o.f.webui.base.WebUiBaseServlet - /login
+26.02.09 13:50:40.013 [OpenMUC Data Manager Pool - thread-17] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=3032, 7.0 -> 289.0
+26.02.09 13:55:10.048 [ConnectionHandler] INFO  o.o.f.a.g.output.iec104.Iec104Server - New client connection from: org.openmuc.j60870.Connection@6556b954
+26.02.09 13:55:10.060 [ConnectionHandler] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Connection handler created: client-1770625510055
+26.02.09 13:55:10.060 [ConnectionHandler] INFO  o.o.f.a.g.output.iec104.Iec104Server - Client connected successfully: org.openmuc.j60870.Connection@6556b954 (total active: 1)
+26.02.09 13:55:10.067 [ConnectionReader] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Data transfer started for client-1770625510055
+26.02.09 13:55:10.108 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770625510055: type=C_CS_NA_1
+26.02.09 13:55:10.140 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770625510055: type=C_IC_NA_1
+26.02.09 13:55:10.141 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - General Interrogation from client-1770625510055
+26.02.09 13:55:10.142 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Sending 57 data points
+26.02.09 13:55:14.120 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - GI complete: 57 points sent
+26.02.09 13:55:14.121 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770625510055: type=C_CI_NA_1
+26.02.09 13:55:14.122 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Counter Interrogation from client-1770625510055
+26.02.09 13:55:14.654 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Sending 57 data points
+26.02.09 13:55:20.966 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - GI complete: 57 points sent
+26.02.09 13:55:21.337 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Counter Interrogation complete
+26.02.09 13:56:16.491 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770625510055: type=C_IC_NA_1
+26.02.09 13:56:16.491 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - General Interrogation from client-1770625510055
+26.02.09 13:56:16.737 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Sending 57 data points
+26.02.09 13:56:20.245 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - GI complete: 57 points sent
+26.02.09 13:57:20.026 [OpenMUC Data Manager Pool - thread-31] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=3032, 289.0 -> 78.0
+26.02.09 14:01:33.830 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770625510055: type=C_IC_NA_1
+26.02.09 14:01:33.831 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - General Interrogation from client-1770625510055
+26.02.09 14:01:33.832 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Sending 57 data points
+26.02.09 14:01:36.548 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - GI complete: 57 points sent
+26.02.09 14:01:36.933 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770625510055: type=C_IC_NA_1
+26.02.09 14:01:36.934 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - General Interrogation from client-1770625510055
+26.02.09 14:01:37.305 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Sending 57 data points
+26.02.09 14:01:44.045 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - GI complete: 57 points sent
+26.02.09 14:01:44.451 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770625510055: type=C_IC_NA_1
+26.02.09 14:01:44.451 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - General Interrogation from client-1770625510055
+26.02.09 14:01:44.452 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Sending 57 data points
+26.02.09 14:01:50.000 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - GI complete: 57 points sent
+26.02.09 14:01:50.000 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770625510055: type=C_IC_NA_1
+26.02.09 14:01:50.000 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - General Interrogation from client-1770625510055
+26.02.09 14:01:50.000 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Sending 57 data points
+26.02.09 14:01:55.664 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - GI complete: 57 points sent
+26.02.09 14:01:56.043 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770625510055: type=C_IC_NA_1
+26.02.09 14:01:56.045 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - General Interrogation from client-1770625510055
+26.02.09 14:01:57.197 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Sending 57 data points
+26.02.09 14:02:03.029 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - GI complete: 57 points sent
+26.02.09 14:02:03.405 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770625510055: type=C_IC_NA_1
+26.02.09 14:02:03.407 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - General Interrogation from client-1770625510055
+26.02.09 14:02:03.778 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Sending 57 data points
+26.02.09 14:02:09.417 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - GI complete: 57 points sent
+26.02.09 14:02:10.725 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770625510055: type=C_IC_NA_1
+26.02.09 14:02:10.726 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - General Interrogation from client-1770625510055
+26.02.09 14:02:11.969 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Sending 57 data points
+26.02.09 14:02:16.525 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - GI complete: 57 points sent
+26.02.09 14:02:16.903 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770625510055: type=C_IC_NA_1
+26.02.09 14:02:16.904 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - General Interrogation from client-1770625510055
+26.02.09 14:02:17.276 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Sending 57 data points
+26.02.09 14:02:23.304 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - GI complete: 57 points sent
+26.02.09 14:02:23.677 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770625510055: type=C_IC_NA_1
+26.02.09 14:02:23.678 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - General Interrogation from client-1770625510055
+26.02.09 14:02:24.054 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Sending 57 data points
+26.02.09 14:02:28.624 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - GI complete: 57 points sent
+26.02.09 14:05:57.466 [FelixStartLevel] INFO  o.o.f.server.restws.RestServer - Deactivating REST Server
+26.02.09 14:05:57.473 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - Deactivating WebUI Base
+26.02.09 14:05:57.477 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Channel Access Tool.
+26.02.09 14:05:57.478 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Channel Configurator.
+26.02.09 14:05:57.478 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Data Exporter.
+26.02.09 14:05:57.479 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Data Plotter.
+26.02.09 14:05:57.480 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Media Viewer.
+26.02.09 14:05:57.481 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: Simple Demo Visualisation.
+26.02.09 14:05:57.482 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin deregistered: User Configurator.
+26.02.09 14:05:57.504 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering data logger: asciilogger.
+26.02.09 14:05:57.506 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Data logger deregistered: asciilogger
+26.02.09 14:05:57.506 [FelixStartLevel] INFO  o.o.f.datalogger.ascii.AsciiLogger - Deactivating Ascii Logger
+26.02.09 14:05:57.509 [FelixStartLevel] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - Deactivating IEC61850 Handler...
+26.02.09 14:05:57.514 [FelixStartLevel] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850 Handler deactivated
+26.02.09 14:05:57.516 [FelixStartLevel] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Deactivating Modbus Handler...
+26.02.09 14:05:57.518 [FelixStartLevel] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus Handler deactivated
+26.02.09 14:05:57.519 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - ========================================
+26.02.09 14:05:57.521 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - Deactivating IEC 104 Server...
+26.02.09 14:05:57.521 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - ========================================
+26.02.09 14:05:57.522 [FelixStartLevel] INFO  o.o.f.app.gateway.core.DataHolder - Listener removed, remaining=0
+26.02.09 14:05:57.523 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - Removed DataHolder listener
+26.02.09 14:05:57.523 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - Closing 1 active connections
+26.02.09 14:05:57.523 [FelixStartLevel] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Closing connection: client-1770625510055
+26.02.09 14:05:57.525 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - All connections closed
+26.02.09 14:05:57.527 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - j60870 Server stopped
+26.02.09 14:05:57.527 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - IEC 104 Server deactivated
+26.02.09 14:05:57.526 [ConnectionReader] WARN  o.o.f.a.g.o.i.Iec104ConnectionHandler - Connection client-1770625510055 closed with error: Socket closed
+26.02.09 14:05:57.534 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering driver: modbus.
+26.02.09 14:05:57.540 [OpenMUC Data Manager Pool - thread-48] INFO  o.o.f.d.m.tcp.ModbusTCPConnection - Disconnect Modbus TCP device
+26.02.09 14:05:57.541 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Driver unregistered: modbus
+26.02.09 14:05:57.547 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Deactivating Data Manager
+26.02.09 14:05:57.551 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Unregistering driver: iec61850.
+26.02.09 14:05:57.551 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Driver unregistered: iec61850
+26.02.09 14:05:57.584 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - Stopped Server@6cbd377{STOPPING}[11.0.22,sto=0]
+26.02.09 14:05:57.598 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@7741b8c9{HTTP/1.1, (http/1.1)}{0.0.0.0:8888}
+26.02.09 14:05:57.599 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@191bf48e{SSL, (ssl, http/1.1)}{0.0.0.0:8889}
+26.02.09 14:05:57.618 [FelixStartLevel] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@6ace3613{/,null,STOPPED}
+26.02.09 14:05:57.632 [FelixStartLevel] INFO  org.apache.felix.http - Stopped Jetty
+26.02.09 14:06:10.265 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - jetty-11.0.22; built: 2024-06-27T16:27:26.756Z; git: e711d4c7040cb1e61aa68cb248fa7280b734a3bb; jvm 11.0.27+6
+26.02.09 14:06:10.463 [FelixStartLevel] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+26.02.09 14:06:10.524 [FelixStartLevel] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@6ace3613{/,null,AVAILABLE}
+26.02.09 14:06:10.557 [FelixStartLevel] INFO  org.eclipse.jetty.server.Server - Started Server@6cbd377{STARTING}[11.0.22,sto=0] @3852ms
+26.02.09 14:06:11.156 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@7741b8c9{HTTP/1.1, (http/1.1)}{0.0.0.0:8888}
+26.02.09 14:06:11.269 [FelixStartLevel] INFO  o.e.jetty.util.ssl.SslContextFactory - x509=X509@5242242b(openmuc,h=[openmuc],a=[],w=[]) for Server@5ab37ef5[provider=null,keyStore=file:///C:/Users/Rightwatts/openmuc/iec-gateway/openmuc/framework/conf/https-certificate.jks,trustStore=null]
+26.02.09 14:06:11.486 [FelixStartLevel] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@191bf48e{SSL, (ssl, http/1.1)}{0.0.0.0:8889}
+26.02.09 14:06:11.489 [FelixStartLevel] INFO  org.apache.felix.http - Started Jetty 11.0.22 at port(s) HTTP:8888 HTTPS:8889 on context path / [minThreads=8,maxThreads=200,acceptors=1,selectors=4]
+26.02.09 14:06:12.823 [FelixStartLevel] INFO  o.o.f.core.datamanager.DataManager - Activating Data Manager with config conf\channels.xml
+26.02.09 14:06:12.916 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'iec61850'.
+26.02.09 14:06:12.925 [FelixStartLevel] WARN  o.o.f.core.datamanager.Device - No driver bundle available for configured driver: 'modbus'.
+26.02.09 14:06:12.938 [FelixStartLevel] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - Activating IEC 61850 Input Handler...
+26.02.09 14:06:12.940 [FelixStartLevel] INFO  o.o.f.app.gateway.core.DataHolder - Initializing DataHolder...
+26.02.09 14:06:12.942 [FelixStartLevel] INFO  o.o.f.app.gateway.core.DataHolder - DataHolder initialized (capacity: 6000, async enabled)
+26.02.09 14:06:12.942 [DataHolder-NotificationProcessor] INFO  o.o.f.app.gateway.core.DataHolder - Notification processor started
+26.02.09 14:06:12.954 [FelixStartLevel] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Activating Modbus TCP Input Handler...
+26.02.09 14:06:12.971 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - Activating IEC 104 Server...
+26.02.09 14:06:12.982 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - j60870 Server started successfully
+26.02.09 14:06:12.985 [FelixStartLevel] INFO  o.o.f.app.gateway.core.DataHolder - Listener added, total=1
+26.02.09 14:06:12.996 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - Registered for spontaneous data updates
+26.02.09 14:06:13.014 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - IEC 104 Server activated successfully
+26.02.09 14:06:13.017 [FelixStartLevel] INFO  o.o.f.a.g.output.iec104.Iec104Server - Listening on 0.0.0.0:2404
+26.02.09 14:06:13.050 [FelixStartLevel] INFO  o.o.f.datalogger.ascii.AsciiLogger - Activating Ascii Logger
+26.02.09 14:06:13.053 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Data logger registered: asciilogger
+26.02.09 14:06:13.155 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Driver registered: iec61850
+26.02.09 14:06:13.156 [FelixStartLevel] INFO  o.o.f.lib.ssl.SslManagerComponent - SSL Component activated
+26.02.09 14:06:13.159 [OpenMUC Data Manager] INFO  o.o.f.core.datamanager.DataManager - Driver registered: modbus
+26.02.09 14:06:13.171 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.driver.modbus.ModbusDriver - Set sampling timeout to 3000 ms.
+26.02.09 14:06:13.223 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.d.m.tcp.ModbusTCPConnection - Modbus Device: 127.0.0.1:502 connected
+26.02.09 14:06:13.423 [ConnectionHandler] INFO  o.o.f.a.g.output.iec104.Iec104Server - New client connection from: org.openmuc.j60870.Connection@47f0597c
+26.02.09 14:06:13.432 [ConnectionHandler] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Connection handler created: client-1770626173429
+26.02.09 14:06:13.436 [ConnectionHandler] INFO  o.o.f.a.g.output.iec104.Iec104Server - Client connected successfully: org.openmuc.j60870.Connection@47f0597c (total active: 1)
+26.02.09 14:06:13.481 [ConnectionReader] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Data transfer started for client-1770626173429
+26.02.09 14:06:13.538 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Channel Access Tool.
+26.02.09 14:06:13.541 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Channel Configurator.
+26.02.09 14:06:13.547 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Data Exporter.
+26.02.09 14:06:13.551 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Data Plotter.
+26.02.09 14:06:13.559 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770626173429: type=C_CS_NA_1
+26.02.09 14:06:13.557 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Media Viewer.
+26.02.09 14:06:13.565 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin Simple Demo Visualisation.
+26.02.09 14:06:13.574 [FelixStartLevel] WARN  o.o.framework.webui.base.WebUiBase - Can't register WebUI plugin User Configurator.
+26.02.09 14:06:13.575 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - Activating WebUI Base
+26.02.09 14:06:13.598 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770626173429: type=C_IC_NA_1
+26.02.09 14:06:13.604 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - General Interrogation from client-1770626173429
+26.02.09 14:06:13.606 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Sending 0 data points
+26.02.09 14:06:13.609 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - GI complete: 0 points sent
+26.02.09 14:06:13.611 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Channel Configurator
+26.02.09 14:06:13.616 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Channel Access Tool
+26.02.09 14:06:13.620 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Data Plotter
+26.02.09 14:06:13.624 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Media Viewer
+26.02.09 14:06:13.628 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Simple Demo Visualisation
+26.02.09 14:06:13.631 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: User Configurator
+26.02.09 14:06:13.635 [FelixStartLevel] INFO  o.o.framework.webui.base.WebUiBase - WebUI plugin registered: Data Exporter
+26.02.09 14:06:13.647 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Received ASDU from client-1770626173429: type=C_CI_NA_1
+26.02.09 14:06:13.649 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Counter Interrogation from client-1770626173429
+26.02.09 14:06:13.650 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Sending 0 data points
+26.02.09 14:06:13.653 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - GI complete: 0 points sent
+26.02.09 14:06:13.663 [aSduListener] INFO  o.o.f.a.g.o.i.Iec104ConnectionHandler - Counter Interrogation complete
+26.02.09 14:06:13.676 [FelixStartLevel] INFO  o.o.f.server.restws.RestServer - Activating REST Server
+26.02.09 14:06:13.789 [FelixStartLevel] INFO  org.apache.felix.webconsole - Servlet 3 bridge enabled
+26.02.09 14:06:15.957 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - Found 57 channels in OpenMUC
+26.02.09 14:06:15.959 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement25 - IOA 1025
+26.02.09 14:06:15.960 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement24 - IOA 1024
+26.02.09 14:06:15.960 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement4 - IOA 1004
+26.02.09 14:06:15.961 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement21 - IOA 1021
+26.02.09 14:06:15.961 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement5 - IOA 1005
+26.02.09 14:06:15.962 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement20 - IOA 1020
+26.02.09 14:06:15.963 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement2 - IOA 1002
+26.02.09 14:06:15.963 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement23 - IOA 1023
+26.02.09 14:06:15.963 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement3 - IOA 1003
+26.02.09 14:06:15.964 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement22 - IOA 1022
+26.02.09 14:06:15.964 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement1 - IOA 1001
+26.02.09 14:06:15.965 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement8 - IOA 1008
+26.02.09 14:06:15.965 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement9 - IOA 1009
+26.02.09 14:06:15.966 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement6 - IOA 1006
+26.02.09 14:06:15.966 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement7 - IOA 1007
+26.02.09 14:06:15.967 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement18 - IOA 1018
+26.02.09 14:06:15.967 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement17 - IOA 1017
+26.02.09 14:06:15.968 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement19 - IOA 1019
+26.02.09 14:06:15.968 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement14 - IOA 1014
+26.02.09 14:06:15.969 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement13 - IOA 1013
+26.02.09 14:06:15.969 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement16 - IOA 1016
+26.02.09 14:06:15.970 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement15 - IOA 1015
+26.02.09 14:06:15.970 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Found 57 channels in OpenMUC
+26.02.09 14:06:15.970 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement10 - IOA 1010
+26.02.09 14:06:15.971 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement12 - IOA 1012
+26.02.09 14:06:15.972 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register26 - IOA 3026 (scale=1.0)
+26.02.09 14:06:15.972 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement11 - IOA 1011
+26.02.09 14:06:15.972 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register27 - IOA 3027 (scale=1.0)
+26.02.09 14:06:15.972 [Iec61850-Init] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850 Init: 25 OK, 0 Failed, 0 Skipped
+26.02.09 14:06:15.973 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register28 - IOA 3028 (scale=1.0)
+26.02.09 14:06:15.973 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register29 - IOA 3029 (scale=1.0)
+26.02.09 14:06:15.974 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register20 - IOA 3020 (scale=1.0)
+26.02.09 14:06:15.974 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register21 - IOA 3021 (scale=1.0)
+26.02.09 14:06:15.974 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register22 - IOA 3022 (scale=1.0)
+26.02.09 14:06:15.975 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register23 - IOA 3023 (scale=1.0)
+26.02.09 14:06:15.975 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register24 - IOA 3024 (scale=1.0)
+26.02.09 14:06:15.976 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register25 - IOA 3025 (scale=1.0)
+26.02.09 14:06:15.976 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register30 - IOA 3030 (scale=1.0)
+26.02.09 14:06:15.977 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register31 - IOA 3031 (scale=1.0)
+26.02.09 14:06:15.977 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register32 - IOA 3032 (scale=1.0)
+26.02.09 14:06:15.977 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register1 - IOA 3001 (scale=1.0)
+26.02.09 14:06:15.978 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register3 - IOA 3003 (scale=1.0)
+26.02.09 14:06:15.979 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register2 - IOA 3002 (scale=1.0)
+26.02.09 14:06:15.979 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register5 - IOA 3005 (scale=1.0)
+26.02.09 14:06:15.979 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register4 - IOA 3004 (scale=1.0)
+26.02.09 14:06:15.980 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register7 - IOA 3007 (scale=1.0)
+26.02.09 14:06:15.980 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register6 - IOA 3006 (scale=1.0)
+26.02.09 14:06:15.980 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register9 - IOA 3009 (scale=1.0)
+26.02.09 14:06:15.981 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register8 - IOA 3008 (scale=1.0)
+26.02.09 14:06:15.981 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register15 - IOA 3015 (scale=1.0)
+26.02.09 14:06:15.981 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register16 - IOA 3016 (scale=1.0)
+26.02.09 14:06:15.982 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register17 - IOA 3017 (scale=1.0)
+26.02.09 14:06:15.982 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register18 - IOA 3018 (scale=1.0)
+26.02.09 14:06:15.982 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register19 - IOA 3019 (scale=1.0)
+26.02.09 14:06:15.982 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register10 - IOA 3010 (scale=1.0)
+26.02.09 14:06:15.983 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register11 - IOA 3011 (scale=1.0)
+26.02.09 14:06:15.983 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register12 - IOA 3012 (scale=1.0)
+26.02.09 14:06:15.984 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register13 - IOA 3013 (scale=1.0)
+26.02.09 14:06:15.985 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus: modbus_register14 - IOA 3014 (scale=1.0)
+26.02.09 14:06:15.986 [Modbus-Init] INFO  o.o.f.a.g.i.m.ModbusTcpInputHandler - Modbus Init: 32 OK, 0 Failed, 0 Skipped
+26.02.09 14:06:17.666 [CM Configuration Updater (Update: pid=org.openmuc.framework.lib.ssl.SslManager)] INFO  o.o.framework.lib.ssl.SslManager - Successfully loaded
+26.02.09 14:06:20.024 [OpenMUC Data Manager Pool - thread-5] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3004, value=0.0, total=4
+26.02.09 14:06:20.024 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3001, value=2.0, total=4
+26.02.09 14:06:20.024 [OpenMUC Data Manager Pool - thread-3] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3002, value=3.0, total=4
+26.02.09 14:06:20.024 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3003, value=3.0, total=4
+26.02.09 14:06:20.024 [OpenMUC Data Manager Pool - thread-7] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3006, value=0.0, total=6
+26.02.09 14:06:20.024 [OpenMUC Data Manager Pool - thread-10] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3009, value=0.0, total=8
+26.02.09 14:06:20.024 [OpenMUC Data Manager Pool - thread-9] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3008, value=0.0, total=7
+26.02.09 14:06:20.024 [OpenMUC Data Manager Pool - thread-6] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3005, value=0.0, total=5
+26.02.09 14:06:20.050 [OpenMUC Data Manager Pool - thread-17] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3020, value=0.0, total=23
+26.02.09 14:06:20.024 [OpenMUC Data Manager Pool - thread-11] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3010, value=0.0, total=10
+26.02.09 14:06:20.024 [OpenMUC Data Manager Pool - thread-8] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3007, value=0.0, total=9
+26.02.09 14:06:20.024 [OpenMUC Data Manager Pool - thread-12] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3011, value=0.0, total=11
+26.02.09 14:06:20.054 [OpenMUC Data Manager Pool - thread-26] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3031, value=0.0, total=27
+26.02.09 14:06:20.036 [OpenMUC Data Manager Pool - thread-15] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3014, value=0.0, total=14
+26.02.09 14:06:20.036 [OpenMUC Data Manager Pool - thread-14] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3013, value=0.0, total=14
+26.02.09 14:06:20.035 [OpenMUC Data Manager Pool - thread-13] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3012, value=0.0, total=12
+26.02.09 14:06:20.036 [OpenMUC Data Manager Pool - thread-5] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3015, value=0.0, total=15
+26.02.09 14:06:20.036 [OpenMUC Data Manager Pool - thread-3] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3016, value=0.0, total=16
+26.02.09 14:06:20.037 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3017, value=0.0, total=17
+26.02.09 14:06:20.040 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3018, value=0.0, total=18
+26.02.09 14:06:20.040 [OpenMUC Data Manager Pool - thread-7] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3021, value=0.0, total=19
+26.02.09 14:06:20.042 [OpenMUC Data Manager Pool - thread-10] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3024, value=0.0, total=21
+26.02.09 14:06:20.040 [OpenMUC Data Manager Pool - thread-16] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3019, value=0.0, total=20
+26.02.09 14:06:20.049 [OpenMUC Data Manager Pool - thread-18] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3022, value=0.0, total=22
+26.02.09 14:06:20.052 [OpenMUC Data Manager Pool - thread-19] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3023, value=0.0, total=24
+26.02.09 14:06:20.053 [OpenMUC Data Manager Pool - thread-22] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3027, value=0.0, total=25
+26.02.09 14:06:20.053 [OpenMUC Data Manager Pool - thread-23] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3028, value=0.0, total=26
+26.02.09 14:06:20.054 [OpenMUC Data Manager Pool - thread-27] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3032, value=78.0, total=28
+26.02.09 14:06:20.056 [OpenMUC Data Manager Pool - thread-20] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3025, value=0.0, total=29
+26.02.09 14:06:20.056 [OpenMUC Data Manager Pool - thread-21] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3026, value=0.0, total=30
+26.02.09 14:06:20.056 [OpenMUC Data Manager Pool - thread-25] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3030, value=0.0, total=31
+26.02.09 14:06:20.057 [OpenMUC Data Manager Pool - thread-24] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=3029, value=0.0, total=32
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-24] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement2 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-22] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement8 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-21] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement4 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-19] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement9 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-18] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement10 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-23] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement7 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-10] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement12 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-7] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement13 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-20] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement5 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-16] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement11 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-1] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement1 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement14 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement15 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-27] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement6 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-3] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement16 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.513 [OpenMUC Data Manager Pool - thread-25] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement3 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.514 [OpenMUC Data Manager Pool - thread-5] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement17 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.514 [OpenMUC Data Manager Pool - thread-13] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement18 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.514 [OpenMUC Data Manager Pool - thread-14] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement19 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.514 [OpenMUC Data Manager Pool - thread-15] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement20 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.514 [OpenMUC Data Manager Pool - thread-26] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement21 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.514 [OpenMUC Data Manager Pool - thread-11] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement24 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.514 [OpenMUC Data Manager Pool - thread-12] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement22 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.514 [OpenMUC Data Manager Pool - thread-17] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement25 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.514 [OpenMUC Data Manager Pool - thread-8] INFO  o.o.f.a.g.i.i.Iec61850InputHandler - IEC61850: iec61850_measurement23 flag=NO_VALUE_RECEIVED_YET - marking INVALID
+26.02.09 14:06:22.514 [OpenMUC Data Manager Pool - thread-24] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1002, value=0, total=33
+26.02.09 14:06:22.525 [OpenMUC Data Manager Pool - thread-8] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1023, value=0, total=57
+26.02.09 14:06:22.514 [OpenMUC Data Manager Pool - thread-22] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1008, value=0, total=34
+26.02.09 14:06:22.515 [OpenMUC Data Manager Pool - thread-21] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1004, value=0, total=35
+26.02.09 14:06:22.515 [OpenMUC Data Manager Pool - thread-19] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1009, value=0, total=36
+26.02.09 14:06:22.515 [OpenMUC Data Manager Pool - thread-18] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1010, value=0, total=37
+26.02.09 14:06:22.516 [OpenMUC Data Manager Pool - thread-10] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1012, value=0, total=39
+26.02.09 14:06:22.516 [OpenMUC Data Manager Pool - thread-23] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1007, value=0, total=38
+26.02.09 14:06:22.517 [OpenMUC Data Manager Pool - thread-7] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1013, value=0, total=40
+26.02.09 14:06:22.517 [OpenMUC Data Manager Pool - thread-20] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1005, value=0, total=41
+26.02.09 14:06:22.518 [OpenMUC Data Manager Pool - thread-16] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1011, value=0, total=42
+26.02.09 14:06:22.520 [OpenMUC Data Manager Pool - thread-1] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1001, value=0, total=43
+26.02.09 14:06:22.521 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1015, value=0, total=45
+26.02.09 14:06:22.521 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1014, value=0, total=44
+26.02.09 14:06:22.521 [OpenMUC Data Manager Pool - thread-27] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1006, value=0, total=46
+26.02.09 14:06:22.522 [OpenMUC Data Manager Pool - thread-3] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1016, value=0, total=47
+26.02.09 14:06:22.522 [OpenMUC Data Manager Pool - thread-25] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1003, value=0, total=48
+26.02.09 14:06:22.522 [OpenMUC Data Manager Pool - thread-5] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1017, value=0, total=49
+26.02.09 14:06:22.522 [OpenMUC Data Manager Pool - thread-13] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1018, value=0, total=50
+26.02.09 14:06:22.523 [OpenMUC Data Manager Pool - thread-14] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1019, value=0, total=51
+26.02.09 14:06:22.523 [OpenMUC Data Manager Pool - thread-15] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1020, value=0, total=52
+26.02.09 14:06:22.523 [OpenMUC Data Manager Pool - thread-26] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1021, value=0, total=53
+26.02.09 14:06:22.524 [OpenMUC Data Manager Pool - thread-11] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1024, value=0, total=54
+26.02.09 14:06:22.524 [OpenMUC Data Manager Pool - thread-12] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1022, value=0, total=55
+26.02.09 14:06:22.524 [OpenMUC Data Manager Pool - thread-17] INFO  o.o.f.app.gateway.core.DataHolder - New point: IOA=1025, value=0, total=56
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-21] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1022, 0 -> 1.0
+26.02.09 14:06:25.035 [OpenMUC Data Manager Pool - thread-27] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1011, 0 -> 24.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-2] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1012, 0 -> 5.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-19] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1021, 0 -> 55.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-18] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1020, 0 -> 0.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-5] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1008, 0 -> 1.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-3] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1010, 0 -> 12.0
+26.02.09 14:06:25.035 [OpenMUC Data Manager Pool - thread-13] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1007, 0 -> 0.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-26] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1004, 0 -> 1.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-17] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1005, 0 -> 0.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-24] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1025, 0 -> 1.0
+26.02.09 14:06:25.035 [OpenMUC Data Manager Pool - thread-8] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1024, 0 -> 1.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-25] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1009, 0 -> 0.0
+26.02.09 14:06:25.046 [OpenMUC Data Manager Pool - thread-14] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1006, 0 -> 0.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-22] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1023, 0 -> 1.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-23] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1018, 0 -> 0.0
+26.02.09 14:06:25.046 [OpenMUC Data Manager Pool - thread-11] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1002, 0 -> 0.0
+26.02.09 14:06:25.046 [OpenMUC Data Manager Pool - thread-15] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1003, 0 -> 1.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-1] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1014, 0 -> 55.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-12] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1001, 0 -> 1.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-4] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1013, 0 -> 1.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-20] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1016, 0 -> 0.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-7] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1017, 0 -> 0.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-16] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1015, 0 -> 0.0
+26.02.09 14:06:25.045 [OpenMUC Data Manager Pool - thread-10] INFO  o.o.f.app.gateway.core.DataHolder - Updated: IOA=1019, 0 -> 0.0

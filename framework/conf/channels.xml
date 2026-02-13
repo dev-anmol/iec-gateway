@@ -10,175 +10,175 @@
         <description>Readings for Mod.stVal</description>
         <channelAddress>IC3_F650PRO/LLN0.Mod.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement2">
         <description>Readings for Mod.ctlModel</description>
         <channelAddress>IC3_F650PRO/LLN0.Mod.ctlModel:CF</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement3">
         <description>Readings for Beh.stVal</description>
         <channelAddress>IC3_F650PRO/LLN0.Beh.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement4">
         <description>Readings for Health.stVal</description>
         <channelAddress>IC3_F650PRO/LLN0.Health.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement5">
         <description>Readings for Loc.stVal</description>
         <channelAddress>IC3_F650PRO/LLN0.Loc.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement6">
         <description>Readings for OpTmh.stVal</description>
         <channelAddress>IC3_F650PRO/LLN0.OpTmh.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement7">
         <description>Readings for OpTmh.stVal</description>
         <channelAddress>IC3_F650CON/LLN0.OpTmh.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement8">
         <description>Readings for Mod.stVal</description>
         <channelAddress>IC3_F650CON/LLN0.Mod.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement9">
         <description>Readings for Mod.stVal</description>
         <channelAddress>IC3_F650CON/LLN0.LocSta.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement10">
         <description>Readings for Mod.stVal</description>
         <channelAddress>IC3_F650CON/LPHD1.PhyHealth.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement11">
         <description>Readings for Mod.stVal</description>
         <channelAddress>IC3_F650CON/MMXU1.Mod.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement12">
         <description>Readings for Beh.stVal</description>
         <channelAddress>IC3_F650CON/MMXU1.Beh.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement13">
         <description>Readings for Health.stVal</description>
         <channelAddress>IC3_F650CON/MMXU1.Health.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement14">
         <description>Readings for TotW.mag</description>
         <channelAddress>IC3_F650CON/MMXU1.TotW.mag.f:MX</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement15">
         <description>Readings for TotVAr.mag</description>
         <channelAddress>IC3_F650CON/MMXU1.TotVAr.mag.f:MX</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement16">
         <description>Readings for TotVAr.instMag</description>
         <channelAddress>IC3_F650CON/MMXU1.TotVAr.instMag.f:MX</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement17">
         <description>Readings for TotVA.mag</description>
         <channelAddress>IC3_F650CON/MMXU1.TotVA.mag.f:MX</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement18">
         <description>Readings for TotPF.mag</description>
         <channelAddress>IC3_F650CON/MMXU1.TotPF.mag.f:MX</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement19">
         <description>Readings for Hz.mag</description>
         <channelAddress>IC3_F650CON/MMXU1.Hz.mag.f:MX</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement20">
         <description>Readings for Hz.instMag</description>
         <channelAddress>IC3_F650CON/MMXU1.Hz.instMag.f:MX</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement21">
         <description>Readings for TotW.mag</description>
         <channelAddress>IC3_F650CON/MMXU1.TotW.mag.f:MX</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement22">
         <description>Readings for TotW.mag</description>
         <channelAddress>IC3_F650CON/MSQI1.Mod.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement23">
         <description>Readings for MSQI1.Beh.stVal</description>
         <channelAddress>IC3_F650CON/MSQI1.Beh.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement24">
         <description>Readings for MSQI1.Health.stVal</description>
         <channelAddress>IC3_F650CON/MSQI1.Health.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="iec61850_measurement25">
         <description>Readings for TotW.mag</description>
         <channelAddress>IC3_F650CON/MMTR1.Mod.stVal:ST</channelAddress>
         <valueType>DOUBLE</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
     </device>
@@ -192,193 +192,193 @@
       <channel id="modbus_register1">
         <channelAddress>1:HOLDING_REGISTERS:1000:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register2">
         <channelAddress>1:HOLDING_REGISTERS:1001:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register3">
         <channelAddress>1:HOLDING_REGISTERS:1002:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register4">
         <channelAddress>1:HOLDING_REGISTERS:1003:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register5">
         <channelAddress>1:HOLDING_REGISTERS:1004:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register6">
         <channelAddress>1:HOLDING_REGISTERS:1005:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register7">
         <channelAddress>1:HOLDING_REGISTERS:1006:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register8">
         <channelAddress>1:HOLDING_REGISTERS:1007:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register9">
         <channelAddress>1:HOLDING_REGISTERS:1008:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register10">
         <channelAddress>1:HOLDING_REGISTERS:1009:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register11">
         <channelAddress>1:HOLDING_REGISTERS:1010:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register12">
         <channelAddress>1:HOLDING_REGISTERS:1011:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register13">
         <channelAddress>1:HOLDING_REGISTERS:1012:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register14">
         <channelAddress>1:HOLDING_REGISTERS:1013:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register15">
         <channelAddress>1:HOLDING_REGISTERS:1014:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register16">
         <channelAddress>1:HOLDING_REGISTERS:1015:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register17">
         <channelAddress>1:HOLDING_REGISTERS:1016:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register18">
         <channelAddress>1:HOLDING_REGISTERS:1017:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register19">
         <channelAddress>1:HOLDING_REGISTERS:1018:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register20">
         <channelAddress>1:HOLDING_REGISTERS:1019:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register21">
         <channelAddress>1:HOLDING_REGISTERS:1020:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register22">
         <channelAddress>1:HOLDING_REGISTERS:1021:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register23">
         <channelAddress>1:HOLDING_REGISTERS:1022:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register24">
         <channelAddress>1:HOLDING_REGISTERS:1023:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register25">
         <channelAddress>1:HOLDING_REGISTERS:1024:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register26">
         <channelAddress>1:HOLDING_REGISTERS:1025:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register27">
         <channelAddress>1:HOLDING_REGISTERS:1026:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register28">
         <channelAddress>1:HOLDING_REGISTERS:1027:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register29">
         <channelAddress>1:HOLDING_REGISTERS:1028:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register30">
         <channelAddress>1:HOLDING_REGISTERS:1029:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register31">
         <channelAddress>1:HOLDING_REGISTERS:1030:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <loggingInterval>4s</loggingInterval>
       </channel>
       <channel id="modbus_register32">
         <channelAddress>1:HOLDING_REGISTERS:1031:INT16</channelAddress>
         <valueType>SHORT</valueType>
-        <samplingInterval>5s</samplingInterval>
+        <samplingInterval>15s</samplingInterval>
         <settings>
           300
         </settings>

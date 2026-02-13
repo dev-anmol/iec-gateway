@@ -39,16 +39,21 @@ public class DataHolder {
     private static final Logger logger = LoggerFactory.getLogger(DataHolder.class);
 
     private static final int INITIAL_CAPACITY = 6000;
-    private static final int NOTIFICATION_QUEUE_CAPACITY = 10000;
-    private static final int NOTIFICATION_THREADS = 2;
-    private static final long QUEUE_POLL_TIMEOUT_SEC = 1;
+    private static final int NOTIFICATION_THREADS = 24; // Increased for 10 max connections + headroom
+    private static final long NOTIFICATION_BATCH_INTERVAL_MS = 100; // Batch updates every 100ms
 
     private final Map<Integer, DataPoint> dataPoints;
     private final CopyOnWriteArrayList<Consumer<DataPoint>> changeListeners;
-    private final BlockingQueue<DataPoint> notificationQueue;
+
+    // Coalescing notification system - stores only latest update per IOA
+    private final ConcurrentHashMap<Integer, DataPoint> pendingNotifications;
     private final ExecutorService notificationExecutor;
     private final Thread notificationThread;
     private volatile boolean running;
+
+    // Metrics for monitoring
+    private volatile long totalUpdates = 0;
+    private volatile long coalescedUpdates = 0;
 
     private static volatile DataHolder instance;
 
@@ -57,7 +62,7 @@ public class DataHolder {
 
         this.dataPoints = new ConcurrentHashMap<>(INITIAL_CAPACITY);
         this.changeListeners = new CopyOnWriteArrayList<>();
-        this.notificationQueue = new LinkedBlockingQueue<>(NOTIFICATION_QUEUE_CAPACITY);
+        this.pendingNotifications = new ConcurrentHashMap<>(INITIAL_CAPACITY);
 
         this.notificationExecutor = Executors.newFixedThreadPool(
                 NOTIFICATION_THREADS,
@@ -121,10 +126,17 @@ public class DataHolder {
                     dataPoint.getIoa(), previous.getValue(), dataPoint.getValue());
         }
 
-        boolean queued = notificationQueue.offer(dataPoint);
+        // Coalesce: put in map (replaces any pending update for same IOA)
+        DataPoint replaced = pendingNotifications.put(dataPoint.getIoa(), dataPoint);
 
-        if (!queued) {
-            logger.warn("Queue full, dropping notification for IOA={}", dataPoint.getIoa());
+        totalUpdates++;
+        if (replaced != null) {
+            coalescedUpdates++;
+            if (coalescedUpdates % 100 == 0) {
+                logger.info("Coalescing stats: {} total updates, {} coalesced ({}%)",
+                        totalUpdates, coalescedUpdates,
+                        (coalescedUpdates * 100 / totalUpdates));
+            }
         }
     }
 
@@ -187,18 +199,40 @@ public class DataHolder {
     }
 
     /**
-     * Background notification processor.
-     * Runs continuously until shutdown.
+     * Background notification processor with batching.
+     * 
+     * BATCHING STRATEGY:
+     * - Waits NOTIFICATION_BATCH_INTERVAL_MS (100ms) to collect updates
+     * - Drains all pending notifications in one batch
+     * - Only latest value per IOA is notified (coalescing)
+     * - Reduces context switching and improves throughput
      */
     private void processNotifications() {
-        logger.info("Notification processor started");
+        logger.info("Notification processor started (batch interval: {}ms)",
+                NOTIFICATION_BATCH_INTERVAL_MS);
 
         while (running) {
             try {
-                DataPoint dataPoint = notificationQueue.poll(QUEUE_POLL_TIMEOUT_SEC, TimeUnit.SECONDS);
+                // Wait for batch interval to allow coalescing
+                Thread.sleep(NOTIFICATION_BATCH_INTERVAL_MS);
 
-                if (dataPoint != null) {
-                    notifyListenersAsync(dataPoint);
+                // Skip if no pending notifications
+                if (pendingNotifications.isEmpty()) {
+                    continue;
+                }
+
+                // Drain all pending notifications atomically
+                Map<Integer, DataPoint> batch = new java.util.HashMap<>(pendingNotifications);
+                pendingNotifications.keySet().removeAll(batch.keySet());
+
+                // Notify listeners for each unique IOA
+                int batchSize = batch.size();
+                if (batchSize > 0) {
+                    logger.info("Processing batch of {} notifications", batchSize);
+
+                    for (DataPoint dataPoint : batch.values()) {
+                        notifyListenersAsync(dataPoint);
+                    }
                 }
 
             } catch (InterruptedException e) {
@@ -253,8 +287,8 @@ public class DataHolder {
                 notificationExecutor.shutdownNow();
             }
 
-            int dropped = notificationQueue.size();
-            notificationQueue.clear();
+            int dropped = pendingNotifications.size();
+            pendingNotifications.clear();
             if (dropped > 0) {
                 logger.warn("Dropped {} pending notifications", dropped);
             }
@@ -276,7 +310,7 @@ public class DataHolder {
                 dataPoints.size(),
                 changeListeners.size(),
                 estimateMemoryUsageKB(),
-                notificationQueue.size());
+                pendingNotifications.size());
     }
 
     private long estimateMemoryUsageKB() {
@@ -289,7 +323,7 @@ public class DataHolder {
     @Deprecated
     public void clear() {
         dataPoints.clear();
-        notificationQueue.clear();
+        pendingNotifications.clear();
         logger.warn("DataHolder cleared!");
     }
 

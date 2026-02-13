@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class HardcodedMappings {
 
-        public static final String IEC104_BIND_IP = "0.0.0.0";
+        public static final String IEC104_BIND_IP = "127.0.0.1";
         public static final int IEC104_PORT = 2404;
         public static final int IEC104_COMMON_ADDRESS = 1;
         public static final int IEC104_MAX_CONNECTIONS = 10;

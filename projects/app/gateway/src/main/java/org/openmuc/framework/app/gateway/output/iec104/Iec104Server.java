@@ -44,6 +44,11 @@ public class Iec104Server {
     private final List<Iec104ConnectionHandler> activeConnections = new CopyOnWriteArrayList<>();
     private Consumer<DataPoint> dataHolderListener;
 
+    // Rate limiting for max connections log
+    private static final long MAX_CONN_LOG_INTERVAL_MS = 30_000; // 30 seconds
+    private volatile long lastMaxConnLogTime = 0;
+    private volatile int rejectedSinceLastLog = 0;
+
     @Activate
     protected void activate() {
         logger.info("Activating IEC 104 Server...");
@@ -112,32 +117,45 @@ public class Iec104Server {
      */
     private void handleDataPointUpdate(DataPoint dataPoint) {
         if (activeConnections.isEmpty()) {
-            logger.trace("No active connections, skipping update for IOA {}",
+            logger.info("No active connections, skipping update for IOA {}",
                     dataPoint.getIoa());
             return;
         }
 
-        logger.debug("Broadcasting spontaneous update: IOA {} = {}",
+        logger.info("Broadcasting spontaneous update: IOA {} = {}",
                 dataPoint.getIoa(), dataPoint.getValue());
 
-        // Send to all active connections
+        // Send to all active connections, remove dead ones
+        List<Iec104ConnectionHandler> deadHandlers = new java.util.ArrayList<>();
         int successCount = 0;
-        int failCount = 0;
 
         for (Iec104ConnectionHandler handler : activeConnections) {
+            // Skip already-closed connections
+            if (!handler.isActive()) {
+                deadHandlers.add(handler);
+                continue;
+            }
+
             try {
                 handler.sendSpontaneous(dataPoint);
                 successCount++;
             } catch (Exception e) {
-                logger.error("Error sending to client {}: {}",
+                logger.warn("Send failed for {}, marking for removal: {}",
                         handler.getClientId(), e.getMessage());
-                failCount++;
+                deadHandlers.add(handler);
             }
         }
 
-        if (logger.isTraceEnabled()) {
-            logger.trace("Broadcast complete: {} sent, {} failed",
-                    successCount, failCount);
+        // Clean up dead connections
+        if (!deadHandlers.isEmpty()) {
+            activeConnections.removeAll(deadHandlers);
+            logger.info("Removed {} dead connection(s), remaining: {}",
+                    deadHandlers.size(), activeConnections.size());
+        }
+
+        if (logger.isInfoEnabled()) {
+            logger.info("Broadcast complete: {} sent to {} clients",
+                    successCount, activeConnections.size());
         }
     }
 
@@ -224,15 +242,21 @@ public class Iec104Server {
         try {
             clientAddress = connection.toString();
         } catch (Exception e) {
-            logger.debug("Could not get client address: {}", e.getMessage());
+            logger.info("Could not get client address: {}", e.getMessage());
         }
 
         logger.info("New client connection from: {}", clientAddress);
 
         // Check max connections limit
         if (activeConnections.size() >= HardcodedMappings.IEC104_MAX_CONNECTIONS) {
-            logger.warn("Max connections ({}) reached, rejecting: {}",
-                    HardcodedMappings.IEC104_MAX_CONNECTIONS, clientAddress);
+            rejectedSinceLastLog++;
+            long now = System.currentTimeMillis();
+            if (now - lastMaxConnLogTime > MAX_CONN_LOG_INTERVAL_MS) {
+                logger.warn("Max connections ({}) reached, rejected {} attempt(s) since last log. Latest: {}",
+                        HardcodedMappings.IEC104_MAX_CONNECTIONS, rejectedSinceLastLog, clientAddress);
+                lastMaxConnLogTime = now;
+                rejectedSinceLastLog = 0;
+            }
 
             try {
                 connection.close();
